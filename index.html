@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -6,7 +6,222 @@
   <title>PROVA – Sicurezza e Social Engineering</title>
   <!-- Link Google Fonts: Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Stili CSS integrati */
+
+    /* Sfondo pagina */
+    body {
+      background-color: #000000; /* nero */
+      color: #FFFFFF; /* testo bianco */
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Nav migliorata: più padding, bordo e sticky */
+    nav {
+      background-color: #111111;
+      padding: 1.2rem 2rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #00FF00; /* bordo verde sottile */
+    }
+
+    nav a {
+      color: #00FF00; /* verde brillante stile hacking */
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+      color: #66FF66; /* verde chiaro al passaggio */
+    }
+
+    /* Hero */
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #00FF00;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #99FF99;
+    }
+
+    /* Sezioni principali */
+    section,
+    main,
+    footer {
+      padding: 2rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #00FF00;
+    }
+
+    section h3 {
+      font-size: 1.3rem;
+      color: #66FF66;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #CCCCCC;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #111111;
+      border: 2px solid #00FF00;
+      border-radius: 12px;
+      padding: 1.5rem;
+      color: #FFFFFF;
+      box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover,
+    .card:focus {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 255, 0, 0.7);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #00FF00;
+    }
+
+    /* Pulsanti */
+    .btn {
+      display: inline-block;
+      background-color: #00FF00;
+      border: none;
+      border-radius: 8px;
+      color: #000000;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background-color: #00CC00;
+      outline: none;
+    }
+
+    /* Form */
+    form {
+      max-width: 600px;
+      margin-top: 2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #66FF66;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      background-color: #111111;
+      border: 2px solid #00FF00;
+      border-radius: 8px;
+      color: #FFFFFF;
+      padding: 0.75rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #66FF66;
+      outline: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #99FF99;
+    }
+
+    /* Contenitore mappa responsivo */
+    #contatti #mappa {
+      margin-top: 2rem;
+      max-width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+      position: relative;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+    }
+
+    #contatti #mappa iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+      border: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111111;
+      color: #00FF00;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -63,55 +278,43 @@
     <div class="cards" role="list">
       <article class="card" role="listitem" tabindex="0">
         <h3>Quando il copia e incolla diventa un’arma: ClickFix</h3>
-        <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nell’arco del 2024, con un focus su tutte le varianti osservate nelle campagne che ne facevano uso e le potenziali tecniche di difesa da mettere in atto per proteggere i dispositivi utilizzati da utenti meno esperti.</p>
-        <a href="githubnotiziaclicfix.html" class="btn" aria-label="Leggi l'articolo completo su ClickFix">Leggi l’articolo completo</a>
+        <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nell’arco del 2024, con un focus su tutte le varianti osservate nelle campagne che colpiscono utenti privati e aziende.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Top 10 consigli per difendersi</h3>
+        <p>Consigli pratici e aggiornati per rendere il tuo personale un muro contro gli attacchi di Social Engineering.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Come riconoscere le email sospette</h3>
+        <p>Indicazioni dettagliate per individuare messaggi potenzialmente pericolosi e prevenire il phishing.</p>
       </article>
     </div>
   </section>
 
- <section id="contatti" tabindex="-1">
-  <h2>Contatti</h2>
-  <p>Scrivici per scoprire come possiamo aiutarti a proteggere il tuo team dalle minacce umane.</p>
-  <p><strong>Prova</strong><br />
-     Sede legale: Benevento (BN)<br />
-     P.IVA: 01772560627
-  </p>
+  <section id="contatti" tabindex="-1">
+    <h2>Contattaci</h2>
+    <p>Scrivici per richiedere informazioni o un preventivo personalizzato.</p>
+    <form action="#" method="post" aria-label="Modulo di contatto">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="La tua email" required />
+      <label for="messaggio">Messaggio:</label>
+      <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
+      <button type="submit" class="btn">Invia</button>
+    </form>
 
-  <!-- Qui la mappa -->
-  <section id="mappa" aria-label="Mappa della sede legale">
-    <h3>Dove siamo</h3>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18808.71937317229!2d14.78496349740905!3d41.129041054332816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b90fa6d5446ff%3A0xb9a97e6d4cdaee28!2sBenevento%2C%20BN%2C%20Italia!5e0!3m2!1sit!2sit!4v1688200000000!5m2!1sit!2sit"
-      width="600"
-      height="450"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Mappa di Benevento">
-    </iframe>
+    <div id="mappa" aria-label="Mappa della nostra sede">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.547810514934!2d11.254385415492167!3d44.49403897910245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a584cb6d1c00f%3A0xc9d2b0decc0e2a7e!2sPiazza%20Maggiore%2C%2040124%20Bologna%20BO!5e0!3m2!1sit!2sit!4v1698787200000!5m2!1sit!2sit" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+        title="Mappa sede" aria-hidden="false"></iframe>
+    </div>
   </section>
-
-  <a href="mailto:info@prova.it" class="btn" aria-label="Scrivi una mail a info@prova.it">Scrivici ora</a>
-
-  <form action="https://formspree.io/f/mlekyvkn" method="POST" aria-label="Modulo di contatto">
-    <label for="nome">Nome</label>
-    <input type="text" id="nome" name="nome" required placeholder="Il tuo nome" />
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="_replyto" required placeholder="La tua email" />
-
-    <label for="messaggio">Messaggio</label>
-    <textarea id="messaggio" name="messaggio" rows="5" required placeholder="Scrivi qui il tuo messaggio"></textarea>
-
-    <button type="submit" class="btn">Invia</button>
-  </form>
-</section>
-
 </main>
 
 <footer>
-  <p>&copy; 2025 PROVA. Tutti i diritti riservati.</p>
+  &copy; 2025 Protezione Social Engineering - Tutti i diritti riservati
 </footer>
 
 </body>
