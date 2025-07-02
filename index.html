@@ -9,13 +9,11 @@
 </head>
 <body>
 
-<nav role="navigation" aria-label="Menu principale">
-  <ul class="nav-list">
-    <li><a href="#chi-siamo">Chi siamo</a></li>
-    <li><a href="#servizi">Servizi</a></li>
-    <li><a href="#notizie">Notizie</a></li>
-    <li><a href="#contatti">Contatti</a></li>
-  </ul>
+<nav>
+  <a href="#chi-siamo">Chi siamo</a>
+  <a href="#servizi">Servizi</a>
+  <a href="#notizie">Notizie</a>
+  <a href="#contatti">Contatti</a>
 </nav>
 
 <header class="hero" role="banner">
@@ -24,73 +22,71 @@
 </header>
 
 <main>
-  <section id="chi-siamo" tabindex="-1">
+
+  <section id="chi-siamo" tabindex="-1" class="section">
     <h2>Chi siamo</h2>
     <p>Il Social Engineering è l'arte di manipolare le persone per ottenere informazioni riservate o accesso a sistemi protetti. È una minaccia in crescita nel mondo della cybersecurity, che si basa sulla psicologia umana piuttosto che sulle falle tecnologiche.</p>
     <p>Gli attaccanti sfruttano tecniche quali la falsa fiducia, l'urgenza indotta e l'autorità apparente per compromettere la sicurezza aziendale. La consapevolezza e una formazione mirata rappresentano le armi più efficaci per proteggersi da queste minacce.</p>
   </section>
 
-  <section id="servizi" tabindex="-1">
+  <section id="servizi" class="section">
     <h2>I nostri servizi</h2>
-    <div class="cards" role="list">
-      <article class="card" role="listitem" tabindex="0">
+    <div class="cards">
+      <article class="card" tabindex="0">
         <h3>Audit di sicurezza umana</h3>
         <p>Analisi approfondite per identificare le vulnerabilità legate al comportamento del personale.</p>
       </article>
-      <article class="card" role="listitem" tabindex="0">
+      <article class="card" tabindex="0">
         <h3>Formazione personalizzata</h3>
         <p>Corsi su misura per il tuo team, per riconoscere e prevenire tentativi di social engineering.</p>
       </article>
-      <article class="card" role="listitem" tabindex="0">
+      <article class="card" tabindex="0">
         <h3>Simulazioni di attacchi reali</h3>
         <p>Test pratici e scenari realistici per mettere alla prova la resilienza della tua organizzazione.</p>
       </article>
-      <article class="card" role="listitem" tabindex="0">
+      <article class="card" tabindex="0">
         <h3>Phishing e spear phishing</h3>
         <p>Simulazioni e prevenzione degli attacchi via email mirati per ingannare il personale.</p>
       </article>
-      <article class="card" role="listitem" tabindex="0">
+      <article class="card" tabindex="0">
         <h3>Pretexting</h3>
         <p>Strategie per riconoscere e difendersi da chi si finge una persona autorizzata per ottenere informazioni.</p>
       </article>
-      <article class="card" role="listitem" tabindex="0">
+      <article class="card" tabindex="0">
         <h3>Tailgating e accesso fisico</h3>
         <p>Consapevolezza e tecniche per prevenire accessi non autorizzati agli spazi aziendali.</p>
       </article>
     </div>
   </section>
 
-  <section id="notizie" tabindex="-1">
+  <section id="notizie" class="section">
     <h2>Notizie & approfondimenti</h2>
-    <div class="cards" role="list">
-      <article class="card" role="listitem" tabindex="0">
+    <div class="cards">
+      <article class="card" tabindex="0">
         <h3>Quando il copia e incolla diventa un’arma: ClickFix</h3>
-        <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nell’arco del 2024, con un focus su tutte le varianti osservate nelle campagne che colpiscono utenti privati e aziende.</p>
+        <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nel 2024, con focus sulle varianti osservate nelle campagne che colpiscono utenti privati e aziende.</p>
       </article>
-      <article class="card" role="listitem" tabindex="0">
+      <article class="card" tabindex="0">
         <h3>Top 10 consigli per difendersi</h3>
         <p>Consigli pratici e aggiornati per rendere il tuo personale un muro contro gli attacchi di Social Engineering.</p>
       </article>
-      <article class="card" role="listitem" tabindex="0">
+      <article class="card" tabindex="0">
         <h3>Come riconoscere le email sospette</h3>
         <p>Indicazioni dettagliate per individuare messaggi potenzialmente pericolosi e prevenire il phishing.</p>
       </article>
     </div>
   </section>
 
-  <section id="contatti" tabindex="-1">
+  <section id="contatti" tabindex="-1" class="section">
     <h2>Contattaci</h2>
     <p>Scrivici per richiedere informazioni o un preventivo personalizzato.</p>
-    <form action="#" method="post" aria-label="Modulo di contatto">
+    <form action="#" method="post" aria-label="Modulo di contatto" class="contact-form">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required />
-      
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="La tua email" required />
-      
       <label for="messaggio">Messaggio:</label>
       <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
-      
       <button type="submit" class="btn">Invia</button>
     </form>
 
@@ -101,6 +97,7 @@
         title="Mappa sede" aria-hidden="false"></iframe>
     </div>
   </section>
+
 </main>
 
 <footer>
