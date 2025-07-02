@@ -23,46 +23,46 @@
 
 <main>
 
-  <section id="chi-siamo" tabindex="-1" class="section">
-    <h2>Chi siamo</h2>
+  <section id="chi-siamo" tabindex="-1" class="section" aria-labelledby="chi-siamo-title">
+    <h2 id="chi-siamo-title">Chi siamo</h2>
     <p>Il Social Engineering è l'arte di manipolare le persone per ottenere informazioni riservate o accesso a sistemi protetti. È una minaccia in crescita nel mondo della cybersecurity, che si basa sulla psicologia umana piuttosto che sulle falle tecnologiche.</p>
     <p>Gli attaccanti sfruttano tecniche quali la falsa fiducia, l'urgenza indotta e l'autorità apparente per compromettere la sicurezza aziendale. La consapevolezza e una formazione mirata rappresentano le armi più efficaci per proteggersi da queste minacce.</p>
   </section>
 
-  <section id="servizi" class="section">
-    <h2>I nostri servizi</h2>
-    <div class="cards">
-      <article class="card" tabindex="0">
+  <section id="servizi" class="section" aria-labelledby="servizi-title">
+    <h2 id="servizi-title">I nostri servizi</h2>
+    <div class="cards" role="list">
+      <article class="card" tabindex="0" role="listitem">
         <h3>Audit di sicurezza umana</h3>
         <p>Analisi approfondite per identificare le vulnerabilità legate al comportamento del personale.</p>
       </article>
-      <article class="card" tabindex="0">
+      <article class="card" tabindex="0" role="listitem">
         <h3>Formazione personalizzata</h3>
         <p>Corsi su misura per il tuo team, per riconoscere e prevenire tentativi di social engineering.</p>
       </article>
-      <article class="card" tabindex="0">
+      <article class="card" tabindex="0" role="listitem">
         <h3>Simulazioni di attacchi reali</h3>
         <p>Test pratici e scenari realistici per mettere alla prova la resilienza della tua organizzazione.</p>
       </article>
-      <article class="card" tabindex="0">
+      <article class="card" tabindex="0" role="listitem">
         <h3>Phishing e spear phishing</h3>
         <p>Simulazioni e prevenzione degli attacchi via email mirati per ingannare il personale.</p>
       </article>
-      <article class="card" tabindex="0">
+      <article class="card" tabindex="0" role="listitem">
         <h3>Pretexting</h3>
         <p>Strategie per riconoscere e difendersi da chi si finge una persona autorizzata per ottenere informazioni.</p>
       </article>
-      <article class="card" tabindex="0">
+      <article class="card" tabindex="0" role="listitem">
         <h3>Tailgating e accesso fisico</h3>
         <p>Consapevolezza e tecniche per prevenire accessi non autorizzati agli spazi aziendali.</p>
       </article>
     </div>
   </section>
 
-  <section id="notizie" class="section">
-    <h2>Notizie & approfondimenti</h2>
-    <div class="cards">
-      <article class="card" tabindex="0">
+  <section id="notizie" class="section" aria-labelledby="notizie-title">
+    <h2 id="notizie-title">Notizie & approfondimenti</h2>
+    <div class="cards" role="list">
+      <article class="card" tabindex="0" role="listitem">
         <h3>Quando il copia e incolla diventa un’arma: ClickFix</h3>
         <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nel 2024, con focus sulle varianti osservate nelle campagne che colpiscono utenti privati e aziende.</p>
         <a href="githubnotiziaclicfix.html" class="btn" target="_blank" rel="noopener noreferrer">Leggi l'articolo completo</a>
@@ -70,8 +70,8 @@
     </div>
   </section>
 
-  <section id="contatti" tabindex="-1" class="section">
-    <h2>Contattaci</h2>
+  <section id="contatti" tabindex="-1" class="section" aria-labelledby="contatti-title">
+    <h2 id="contatti-title">Contattaci</h2>
     <p>Scrivici per richiedere informazioni o un preventivo personalizzato.</p>
     <form action="#" method="post" aria-label="Modulo di contatto" class="contact-form">
       <label for="nome">Nome:</label>
@@ -89,11 +89,12 @@
         width="600" 
         height="450" 
         style="border:0;" 
-        allowfullscreen="" 
+        allowfullscreen 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade" 
-        title="Mappa della sede in Piazza del Duomo, Milano">
-      </iframe>
+        title="Mappa della sede in Piazza del Duomo, Milano"
+        aria-hidden="false"
+      ></iframe>
     </div>
   </section>
 
