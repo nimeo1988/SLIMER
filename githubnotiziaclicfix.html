@@ -6,7 +6,6 @@
   <title>ClickFix - Protezione Social Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
-    /* Qui inserisci il CSS che mi hai fornito */
     body {
       background-color: #1A2A6C;
       color: #FFFFFF;
@@ -187,8 +186,6 @@
         font-size: 1.1rem;
       }
     }
-
-    /* Container per testo + immagine */
     .article-container {
       max-width: 800px;
       margin: 0 auto;
@@ -216,24 +213,53 @@
   <main>
     <article class="article-container" tabindex="-1">
       <h1>ClickFix: Quando il copia e incolla diventa un’arma</h1>
-      <p>Nel 2024 è emersa una nuova tecnica di social engineering denominata <strong>ClickFix</strong>. Si basa sull'abuso della fiducia visiva dell'utente durante il copia-incolla da documenti o email compromesse.</p>
 
-      <img src="img.png" alt="Esempio tattica ClickFix" class="responsive-img" />
+      <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del
+      2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi
+      malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie
+      con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
 
-      <h2>Come funziona</h2>
-      <p>ClickFix sfrutta contenuti HTML mascherati: ciò che l'utente vede sullo schermo non corrisponde a ciò che viene copiato. Ad esempio, un link apparentemente sicuro può essere sostituito da un URL malevolo durante il copia-incolla.</p>
+      <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata
+      dall’attore malevolo o inducendola ad aprire un documento inviato in allegato
+      che conterranno il pretesto per spingere la vittima ad eseguire i comandi.
+      Gli attaccanti utilizzano due principali pretesti:</p>
 
-      <h2>Perché è pericoloso</h2>
-      <p>La tecnica è quasi invisibile, perché il contenuto copiato sembra legittimo. Questo la rende estremamente insidiosa, soprattutto in ambienti in cui gli utenti copiano e incollano password, URL o comandi in terminali.</p>
-
-      <h2>Come proteggersi</h2>
       <ul>
-        <li>Verifica sempre i contenuti incollati, soprattutto se provengono da fonti non verificate.</li>
-        <li>Evita di incollare comandi direttamente nei terminali da email o chat.</li>
-        <li>Utilizza strumenti che evidenziano differenze tra testo visibile e contenuto reale (es. editor sicuri).</li>
+        <li><strong>finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul
+        CAPTCHA che copierà a sua insaputa un codice malevolo negli
+        appunti. Successivamente gli verranno mostrate delle finte istruzioni per
+        risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo
+        premendo invio.</li>
+
+        <li><strong>finti messaggi di errore:</strong> le pagine o documenti conterranno finti file
+        Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom,
+        Teams) e siti noti con presunti errori ed un pulsante da cliccare per
+        risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al
+        click viene copiato un codice ad insaputa della vittima e
+        contestualmente vengono mostrate delle istruzioni da seguire. Alcune
+        varianti della campagna non contengono il bottone da cliccare ma
+        mostrano direttamente il codice da copiare con le relative istruzioni.</li>
       </ul>
 
-      <p>Rimani aggiornato sulle minacce emergenti e sensibilizza il tuo team su questo tipo di attacchi invisibili ma estremamente efficaci.</p>
+      <img src="img.png" alt="Esempio codice da copiare e incollare" class="responsive-img" />
+
+      <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui
+      incollare ed eseguire il codice:</p>
+
+      <ol>
+        <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
+        <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
+        <li>Finestre di terminale, sia CMD che PowerShell</li>
+      </ol>
+
+      <p>Per difendersi da queste campagne è bene seguire le seguenti regole:</p>
+
+      <ul>
+        <li>Non incollare mai codice copiato da fonti non verificate o non ufficiali</li>
+        <li>Non aprire mai allegati o link sospetti, specialmente se richiesti improvvisamente</li>
+        <li>Formare il personale aziendale per riconoscere queste tattiche</li>
+        <li>Utilizzare strumenti di sicurezza che monitorano attività sospette</li>
+      </ul>
     </article>
   </main>
 
