@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PROVA â€“ Sicurezza e Social Engineering</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <a href="#chi-siamo">Chi siamo</a>
+  <a href="#servizi">Servizi</a>
+  <a href="#contatti">Contatti</a>
+</nav>
+
+<section class="hero" role="banner">
+  <h1>Proteggi la tua azienda dal social engineering</h1>
+  <p>Formazione, simulazioni e soluzioni concrete per rendere il tuo team pronto a reagire alle minacce umane.</p>
+</section>
+
+<main>
+  <section id="chi-siamo" tabindex="-1">
+    <h2>Chi siamo</h2>
+    <p>Il Social Engineering Ã¨ l'arte di manipolare le persone per ottenere informazioni riservate o accesso a sistemi protetti. Ãˆ una minaccia in crescita nel mondo della cybersecurity, che si basa sulla psicologia umana piuttosto che sulle falle tecnologiche.</p>
+    <p>Attraverso tecniche come la creazione di falsa fiducia, l'urgenza artificiale e l'autoritÃ  simulata, gli attaccanti compromettono la sicurezza aziendale. La consapevolezza e la formazione sono le chiavi per difendersi efficacemente.</p>
+  </section>
+
+  <section id="servizi">
+    <h2>I nostri servizi</h2>
+    <div class="cards" role="list">
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Audit di sicurezza umana</h3>
+        <p>Analisi approfondite per identificare le vulnerabilitÃ  legate al comportamento del personale.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Formazione personalizzata</h3>
+        <p>Corsi su misura per il tuo team, per riconoscere e prevenire tentativi di social engineering.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Simulazioni di attacchi reali</h3>
+        <p>Test pratici e scenari realistici per mettere alla prova la resilienza della tua organizzazione.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Phishing e spear phishing</h3>
+        <p>Simulazioni e prevenzione degli attacchi via email mirati per ingannare il personale.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Pretexting</h3>
+        <p>Strategie per riconoscere e difendersi da chi si finge una persona autorizzata per ottenere informazioni.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Tailgating e accesso fisico</h3>
+        <p>Consapevolezza e tecniche per prevenire accessi non autorizzati agli spazi aziendali.</p>
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Consulenza preventiva</h3>
+        <p>Strategie e supporto continuo per mitigare i rischi e rafforzare le difese umane.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="notizie">
+    <h2>Notizie & approfondimenti</h2>
+    <div class="cards" role="list">
+      <article class="card" role="listitem" tabindex="0">
+        <h3>Quando il copia e incolla diventa unâ€™arma: ClickFix</h3>
+        <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nellâ€™arco del 2024, con un focus su tutte le varianti osservate nelle campagne che ne facevano uso e le potenziali tecniche di difesa da mettere in atto per proteggere i dispositivi utilizzati da utenti meno esperti.</p>
+        <a href="githubnotiziaclicfix.html" class="btn" aria-label="Leggi l'articolo completo su ClickFix">Leggi lâ€™articolo completo</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contatti" tabindex="-1">
+    <h2>Contatti</h2>
+    <p>Scrivici per scoprire come possiamo aiutarti a proteggere il tuo team dalle minacce umane.</p>
+    <p><strong>Slimer Srl</strong><br />
+       Sede legale: Via Traiano, 45, 82100, Benevento (BN)<br />
+       P.IVA: 01772560627
+    </p>
+    <a href="mailto:info@prova.it" class="btn" aria-label="Scrivi una mail a info@prova.it">Scrivici ora</a>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.8589324012493!2d14.78322671549851!3d41.12995227929822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133aa0919b7651db%3A0xc99797e4d2099933!2sVia%20Traiano%2C%2045%2C%2082100%20Benevento%20BN!5e0!3m2!1sit!2sit!4v1688476680346!5m2!1sit!2sit"
+        width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <form action="https://formspree.io/f/mlekyvkn" method="POST" aria-label="Modulo di contatto">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required placeholder="Il tuo nome" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required placeholder="La tua email" />
+
+      <label for="messaggio">Messaggio</label>
+      <textarea id="messaggio" name="messaggio" rows="5" required placeholder="Scrivi qui il tuo messaggio"></textarea>
+
+      <button type="submit" class="btn">Invia</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 PROVA. Tutti i diritti riservati.</p>
+</footer>
+
+</body>
+</html>
