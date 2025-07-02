@@ -176,4 +176,27 @@ footer {
   .hero p {
     font-size: 1rem;
   }
+  /* Aumenta dimensione titoli principali */
+.hero h1 {
+  font-size: 3rem; /* da 2.5rem a 3rem */
+}
+
+.hero p {
+  font-size: 1.4rem; /* da 1.25rem a 1.4rem */
+}
+
+section h2 {
+  font-size: 2rem; /* aumenta da default */
+}
+
+section h3 {
+  font-size: 1.3rem; /* leggermente più grande */
+}
+
+/* Paragrafi nelle sezioni */
+section p {
+  font-size: 1.1rem; /* un po’ più leggibile */
+  line-height: 1.6;
+}
+
 }
