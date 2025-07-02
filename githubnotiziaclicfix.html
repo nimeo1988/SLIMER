@@ -1,134 +1,76 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Articolo ClickFix - PROVA</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-<style>
-  body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.8;       /* leggermente più spazioso */
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    color: #EFEFEF;
-    background-color: #003366;
-    font-size: 18px;         /* testo più grande */
-  }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #FF6600;           /* arancione per i titoli */
-    font-weight: 700;
-  }
-
-  p, ul, ol, li {
-    color: #E0E0E0;           /* testo chiaro leggermente più tenue */
-  }
-
-  ul, ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  li {
-    margin-bottom: 0.8rem;
-  }
-
-  pre {
-    background-color: #1A2A40;      /* blu ancora più scuro per il codice */
-    padding: 1rem;
-    border-radius: 4px;
-    overflow-x: auto;
-    color: #FF6600;           /* testo arancione nel codice */
-    font-family: monospace;
-  }
-
-  code {
-    background-color: #1A2A40;
-    color: #FF6600;
-    padding: 0 4px;
-    border-radius: 3px;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 1rem 0 2rem 0;
-    border: 3px solid #FF6600; /* bordo arancione intorno all'immagine */
-    border-radius: 8px;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #999999;
-    margin: 3rem 0 1rem 0;
-    border-top: 1px solid #FF6600;
-    padding-top: 1rem;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quando il copia e incolla diventa un'arma: ClickFix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
+
+<nav>
+  <a href="index.html#chi-siamo">Chi siamo</a>
+  <a href="index.html#servizi">Servizi</a>
+  <a href="index.html#notizie">Notizie</a>
+  <a href="index.html#contatti">Contatti</a>
+</nav>
+
+<header class="hero" role="banner">
   <h1>Quando il copia e incolla diventa un'arma: ClickFix</h1>
+  <p>Scopri come una semplice azione può trasformarsi in una tecnica di attacco efficace e subdola.</p>
 </header>
 
 <main>
-  <article>
-    <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime a incollare ed eseguire comandi malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
+  <section class="section">
+    <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime a incollare ed eseguire comandi malevoli su dispositivi desktop Windows.</p>
 
-    <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato che contiene il pretesto per spingere la vittima ad eseguire i comandi.</p>
+    <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato. L’obiettivo è spingere l’utente ad eseguire dei comandi senza comprenderne le conseguenze.</p>
 
-    <p>Gli attaccanti utilizzano due principali pretesti:</p>
+    <p>Le tecniche più comuni includono:</p>
 
     <ul>
-      <li>
-        <strong>Finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul CAPTCHA che copierà a sua insaputa un codice malevolo negli appunti. Successivamente gli verranno mostrate delle finte istruzioni per risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo premendo invio.
-      </li>
+      <li><strong>Finti CAPTCHA:</strong> cliccando sul CAPTCHA, l’utente copia inconsapevolmente codice malevolo, che poi viene incollato ed eseguito seguendo istruzioni fuorvianti.</li>
+      <li><strong>Finti messaggi di errore:</strong> documenti o pagine mostrano errori fasulli e propongono azioni correttive che implicano l’esecuzione di codice copiato.</li>
     </ul>
 
     <img src="img.png" alt="Esempio tattica ClickFix" />
 
-    <ul>
-      <li><strong>Finti messaggi di errore:</strong> le pagine o documenti conterranno finti file Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom, Teams) e siti noti con presunti errori ed un pulsante da cliccare per risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al click viene copiato un codice a insaputa della vittima e contestualmente vengono mostrate delle istruzioni da seguire. Alcune varianti della campagna non contengono il bottone da cliccare ma mostrano direttamente il codice da copiare con le relative istruzioni.</li>
-    </ul>
-
-    <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui incollare ed eseguire il codice:</p>
-
+    <p>Le destinazioni dove gli utenti incollano questi comandi sono spesso:</p>
     <ol>
-      <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
-      <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
-      <li>finestre di terminale, sia CMD che PowerShell, talvolta fatte avviare tramite la scorciatoia WIN+X</li>
+      <li>la finestra Esegui (WIN + R)</li>
+      <li>la barra degli indirizzi di Esplora Risorse (WIN + E)</li>
+      <li>terminali come CMD o PowerShell (WIN + X)</li>
     </ol>
 
-    <p>Per proteggere i propri dispositivi da questa tattica è opportuno adottare una serie di misure preventive atte a bloccare l'attacco, in particolar modo quando sono utilizzati da utenti meno esperti. Ecco alcune delle principali difese:</p>
-
+    <p>Per difendersi da questa tecnica, si consiglia:</p>
     <ul>
-      <li><strong>Disabilitare il comando Esegui:</strong> aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code> un valore DWORD 32-bit con nome “NoRun” ed impostarlo ad 1. Questa modifica blocca le campagne che utilizzano la finestra di Esegui o la barra dell’Esplora Risorse.</li>
-      <li><strong>Disabilitare CMD e PowerShell per l’utente:</strong>
+      <li><strong>Disabilitare la finestra "Esegui":</strong> modificando il registro di sistema con:
+        <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code> → DWORD <code>NoRun</code> = <code>1</code>
+      </li>
+
+      <li><strong>Bloccare CMD e PowerShell:</strong>
         <ul>
-          <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows</code> un valore DWORD 32-bit con nome “DisableCMD” ed impostarlo ad 1.</li>
-          <li>aggiungere alla chiave di registro <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\PowerShell</code> un valore DWORD 32-bit con nome “DisablePowerShell” ed impostarlo ad 1.</li>
+          <li><code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows</code> → DWORD <code>DisableCMD</code> = <code>1</code></li>
+          <li><code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\PowerShell</code> → DWORD <code>DisablePowerShell</code> = <code>1</code></li>
         </ul>
       </li>
-      <li><strong>Disabilitare la Clipboard:</strong> creare uno script in PowerShell che venga eseguito in background ad ogni avvio con il seguente codice:
-        <pre>
+
+      <li><strong>Bloccare la clipboard in modo automatico:</strong> uno script PowerShell in background può sovrascriverla ogni 100 secondi:
+        <pre><code>
 while($true){
   Set-Clipboard -Value "La Clipboard è stata disabilitata su questo dispositivo"
-  sleep 100
+  Start-Sleep -Seconds 100
 }
-        </pre>
+        </code></pre>
       </li>
     </ul>
-  </article>
+  </section>
 </main>
 
 <footer>
-  <p>© 2025 PROVA. Tutti i diritti riservati.</p>
+  &copy; 2025 Protezione Social Engineering - Tutti i diritti riservati
 </footer>
+
 </body>
 </html>
