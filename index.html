@@ -6,6 +6,32 @@
   <title>Protezione Social Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Aggiungo solo un po' di margine al dettaglio notizia */
+    #clickfix {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 2px solid #4A90E2;
+      color: #222;
+      background: #f0f4ff;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(74,144,226,0.2);
+    }
+    #clickfix h1 {
+      color: #16225C;
+    }
+    #clickfix p, #clickfix li {
+      color: #333;
+    }
+    #clickfix img.responsive-img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -65,43 +91,74 @@
       <article class="card" tabindex="0" role="listitem">
         <h3>Quando il copia e incolla diventa un’arma: ClickFix</h3>
         <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nel 2024, con focus sulle varianti osservate nelle campagne che colpiscono utenti privati e aziende.</p>
-        <a href="githubnotiziaclicfix.html" class="btn" target="_blank" rel="noopener noreferrer">Leggi l'articolo completo</a>
+        <a href="#clickfix" class="btn" aria-describedby="clickfix">Leggi l'articolo completo</a>
       </article>
     </div>
+
+    <!-- Articolo completo incorporato -->
+    <article id="clickfix" class="article-container" tabindex="-1">
+      <h1>ClickFix: Quando il copia e incolla diventa un’arma</h1>
+
+      <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del
+      2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi
+      malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie
+      con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
+
+      <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata
+      dall’attore malevolo o inducendola ad aprire un documento inviato in allegato
+      che conterranno il pretesto per spingere la vittima ad eseguire i comandi.
+      Gli attaccanti utilizzano due principali pretesti:</p>
+
+      <ul>
+        <li><strong>finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul
+        CAPTCHA che copierà a sua insaputa un codice malevolo negli
+        appunti. Successivamente gli verranno mostrate delle finte istruzioni per
+        risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo
+        premendo invio.</li>
+
+        <li><strong>finti messaggi di errore:</strong> le pagine o documenti conterranno finti file
+        Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom,
+        Teams) e siti noti con presunti errori ed un pulsante da cliccare per
+        risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al
+        click viene copiato un codice ad insaputa della vittima e
+        contestualmente vengono mostrate delle istruzioni da seguire. Alcune
+        varianti della campagna non contengono il bottone da cliccare ma
+        mostrano direttamente il codice da copiare con le relative istruzioni.</li>
+      </ul>
+
+      <img src="img.png" alt="Esempio codice da copiare e incollare" class="responsive-img" />
+
+      <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui
+      incollare ed eseguire il codice:</p>
+
+      <ol>
+        <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
+        <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
+        <li>Finestre di terminale, sia CMD che PowerShell</li>
+      </ol>
+
+      <p>Per difendersi da queste campagne è bene seguire le seguenti regole:</p>
+
+      <ul>
+        <li>Non incollare mai codice copiato da fonti non verificate o non ufficiali</li>
+        <li>Non aprire mai allegati o link sospetti, specialmente se richiesti con urgenza o minacce</li>
+        <li>Formare il personale sull’esistenza di queste tecniche e su come riconoscerle</li>
+        <li>Implementare politiche di sicurezza che limitino l’esecuzione di comandi sconosciuti sui dispositivi aziendali</li>
+      </ul>
+
+      <p>ClickFix è un esempio lampante di come il social engineering si evolva sfruttando le abitudini quotidiane e la scarsa attenzione, e quanto sia importante mantenere alta la guardia e preparare le persone a non cadere in trappola.</p>
+    </article>
   </section>
 
-  <section id="contatti" tabindex="-1" class="section" aria-labelledby="contatti-title">
-    <h2 id="contatti-title">Contattaci</h2>
-    <p>Scrivici per richiedere informazioni o un preventivo personalizzato.</p>
-    <form action="#" method="post" aria-label="Modulo di contatto" class="contact-form">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required />
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="La tua email" required />
-      <label for="messaggio">Messaggio:</label>
-      <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
-      <button type="submit" class="btn">Invia</button>
-    </form>
-
-    <div id="mappa" aria-label="Mappa della nostra sede">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.027011350545!2d9.191382415497598!3d45.46466497910112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6f49c7421b1%3A0xe10a1373b382870d!2sPiazza%20del%20Duomo%2C%2012012%20Milano%20MI%2C%20Italia!5e0!3m2!1sit!2sus!4v1688234743221!5m2!1sit!2sus" 
-        width="600" 
-        height="450" 
-        style="border:0;" 
-        allowfullscreen 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade" 
-        title="Mappa della sede in Piazza del Duomo, Milano"
-        aria-hidden="false"
-      ></iframe>
-    </div>
+  <section id="contatti" class="section" aria-labelledby="contatti-title">
+    <h2 id="contatti-title">Contatti</h2>
+    <p>Per informazioni e consulenze contattaci via email: <a href="mailto:info@protezione-socialengineering.it">info@protezione-socialengineering.it</a></p>
   </section>
 
 </main>
 
 <footer role="contentinfo">
-  &copy; 2025 Protezione Social Engineering - Tutti i diritti riservati
+  <p>© 2025 Protezione Social Engineering</p>
 </footer>
 
 </body>
