@@ -5,31 +5,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Protezione Social Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Aggiungo solo un po' di margine al dettaglio notizia */
-    #clickfix {
-      margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 2px solid #4A90E2;
-      color: #222;
-      background: #f0f4ff;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(74,144,226,0.2);
+    /* Base Reset */
+    * {
+      box-sizing: border-box;
     }
-    #clickfix h1 {
-      color: #16225C;
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #1A2A6C;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    #clickfix p, #clickfix li {
-      color: #333;
+
+    /* NAVBAR */
+    nav {
+      background-color: #16225C;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #4A90E2;
     }
-    #clickfix img.responsive-img {
+    nav a {
+      color: #7FB3FF;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #A9C8FF;
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #4A90E2;
+      text-shadow: 0 0 8px rgba(74, 144, 226, 0.7);
+    }
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #B0C7FF;
+    }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #23307a;
+      padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+      transition: background-color 0.3s ease;
+    }
+    .card:focus,
+    .card:hover {
+      background-color: #2a3a99;
+      outline: none;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #a9c8ff;
+    }
+    .card p {
+      margin-bottom: 1rem;
+      color: #d0dffb;
+    }
+
+    /* Accordion button */
+    .accordion-btn {
+      background-color: #4A90E2;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 0.5rem;
+    }
+    .accordion-btn:hover,
+    .accordion-btn:focus {
+      background-color: #3570c9;
+      outline: none;
+    }
+
+    /* Accordion content */
+    .accordion-content {
+      margin-top: 1rem;
+      background-color: #18234f;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      color: #d0dffb;
+      line-height: 1.5;
+      box-shadow: inset 0 0 5px rgba(74, 144, 226, 0.5);
+    }
+    .accordion-content img {
       max-width: 100%;
-      height: auto;
+      border-radius: 12px;
       margin: 1rem 0;
+      box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    }
+
+    /* Contact form */
+    .contact-form label {
       display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: #a9c8ff;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+    .contact-form button.btn {
+      background-color: #4A90E2;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .contact-form button.btn:hover,
+    .contact-form button.btn:focus {
+      background-color: #3570c9;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #16225C;
+      color: #7FB3FF;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      border-top: 2px solid #4A90E2;
+    }
+
+    /* Accessibility focus */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #A9C8FF;
+      outline-offset: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      main {
+        width: 95%;
+        padding: 1rem;
+      }
+      .cards {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -91,75 +269,77 @@
       <article class="card" tabindex="0" role="listitem">
         <h3>Quando il copia e incolla diventa un’arma: ClickFix</h3>
         <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nel 2024, con focus sulle varianti osservate nelle campagne che colpiscono utenti privati e aziende.</p>
-        <a href="#clickfix" class="btn" aria-describedby="clickfix">Leggi l'articolo completo</a>
+        <button class="accordion-btn" aria-expanded="false" aria-controls="clickfix-content" id="clickfix-btn">
+          Leggi l'articolo completo
+        </button>
+        <div id="clickfix-content" class="accordion-content" hidden tabindex="0">
+          <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
+
+          <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato che conterranno il pretesto per spingere la vittima ad eseguire i comandi. Gli attaccanti utilizzano due principali pretesti:</p>
+
+          <ul>
+            <li><strong>finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul CAPTCHA che copierà a sua insaputa un codice malevolo negli appunti. Successivamente gli verranno mostrate delle finte istruzioni per risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo premendo invio.</li>
+            <li><strong>finti messaggi di errore:</strong> le pagine o documenti conterranno finti file Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom, Teams) e siti noti con presunti errori ed un pulsante da cliccare per risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al click viene copiato un codice ad insaputa della vittima e contestualmente vengono mostrate delle istruzioni da seguire. Alcune varianti della campagna non contengono il bottone da cliccare ma mostrano direttamente il codice da copiare con le relative istruzioni.</li>
+          </ul>
+
+          <img src="img.png" alt="Esempio codice da copiare e incollare" />
+
+          <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui incollare ed eseguire il codice:</p>
+
+          <ol>
+            <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
+            <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
+            <li>Finestre di terminale, sia CMD che PowerShell</li>
+          </ol>
+
+          <p>Per difendersi da queste campagne è bene seguire le seguenti regole:</p>
+
+          <ul>
+            <li>Non incollare mai codice copiato da fonti non verificate o non ufficiali</li>
+            <li>Non aprire mai allegati o link sospetti, specialmente se richiesti improvvisamente</li>
+            <li>Formare il personale aziendale per riconoscere queste tattiche</li>
+            <li>Utilizzare strumenti di sicurezza che monitorano attività sospette</li>
+          </ul>
+        </div>
       </article>
     </div>
-
-    <!-- Articolo completo incorporato -->
-    <article id="clickfix" class="article-container" tabindex="-1">
-      <h1>ClickFix: Quando il copia e incolla diventa un’arma</h1>
-
-      <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del
-      2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi
-      malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie
-      con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
-
-      <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata
-      dall’attore malevolo o inducendola ad aprire un documento inviato in allegato
-      che conterranno il pretesto per spingere la vittima ad eseguire i comandi.
-      Gli attaccanti utilizzano due principali pretesti:</p>
-
-      <ul>
-        <li><strong>finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul
-        CAPTCHA che copierà a sua insaputa un codice malevolo negli
-        appunti. Successivamente gli verranno mostrate delle finte istruzioni per
-        risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo
-        premendo invio.</li>
-
-        <li><strong>finti messaggi di errore:</strong> le pagine o documenti conterranno finti file
-        Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom,
-        Teams) e siti noti con presunti errori ed un pulsante da cliccare per
-        risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al
-        click viene copiato un codice ad insaputa della vittima e
-        contestualmente vengono mostrate delle istruzioni da seguire. Alcune
-        varianti della campagna non contengono il bottone da cliccare ma
-        mostrano direttamente il codice da copiare con le relative istruzioni.</li>
-      </ul>
-
-      <img src="img.png" alt="Esempio codice da copiare e incollare" class="responsive-img" />
-
-      <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui
-      incollare ed eseguire il codice:</p>
-
-      <ol>
-        <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
-        <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
-        <li>Finestre di terminale, sia CMD che PowerShell</li>
-      </ol>
-
-      <p>Per difendersi da queste campagne è bene seguire le seguenti regole:</p>
-
-      <ul>
-        <li>Non incollare mai codice copiato da fonti non verificate o non ufficiali</li>
-        <li>Non aprire mai allegati o link sospetti, specialmente se richiesti con urgenza o minacce</li>
-        <li>Formare il personale sull’esistenza di queste tecniche e su come riconoscerle</li>
-        <li>Implementare politiche di sicurezza che limitino l’esecuzione di comandi sconosciuti sui dispositivi aziendali</li>
-      </ul>
-
-      <p>ClickFix è un esempio lampante di come il social engineering si evolva sfruttando le abitudini quotidiane e la scarsa attenzione, e quanto sia importante mantenere alta la guardia e preparare le persone a non cadere in trappola.</p>
-    </article>
   </section>
 
   <section id="contatti" class="section" aria-labelledby="contatti-title">
     <h2 id="contatti-title">Contatti</h2>
-    <p>Per informazioni e consulenze contattaci via email: <a href="mailto:info@protezione-socialengineering.it">info@protezione-socialengineering.it</a></p>
+    <form class="contact-form" action="#" method="post" aria-label="Modulo di contatto">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="messaggio">Messaggio</label>
+      <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Invia</button>
+    </form>
   </section>
 
 </main>
 
-<footer role="contentinfo">
-  <p>© 2025 Protezione Social Engineering</p>
+<footer>
+  <p>&copy; 2025 Protezione Social Engineering - Tutti i diritti riservati</p>
 </footer>
+
+<script>
+  const btn = document.getElementById('clickfix-btn');
+  const content = document.getElementById('clickfix-content');
+
+  btn.addEventListener('click', () => {
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!isExpanded));
+    content.hidden = isExpanded;
+    if (!isExpanded) {
+      content.focus();
+    }
+  });
+</script>
 
 </body>
 </html>
