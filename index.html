@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ClickFix - Protezione Social Engineering</title>
+  <title>Protezione Social Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Nuova palette colori per un look più pulito e moderno */
+    /* Stile di base per un design pulito e leggibile */
+
     body {
-      background-color: #0E1B3D; /* blu molto scuro */
-      color: #E0E7FF; /* azzurro chiaro */
-      font-family: 'Roboto', Arial, sans-serif;
       margin: 0;
       padding: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #0E1B3D;
+      color: #E0E7FF;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+
     nav {
-      background-color: #142859; /* blu medio scuro */
+      background-color: #142859;
       padding: 1rem 2rem;
       display: flex;
       justify-content: center;
@@ -26,6 +32,7 @@
       z-index: 1000;
       border-bottom: 3px solid #5470FF;
     }
+
     nav a {
       color: #AFC7FF;
       text-decoration: none;
@@ -33,76 +40,154 @@
       font-size: 1.15rem;
       transition: color 0.3s ease;
     }
+
     nav a:hover,
     nav a:focus {
       color: #D1D9FF;
       text-decoration: underline;
       outline-offset: 4px;
     }
+
     header.hero {
       padding: 4rem 1.5rem;
       text-align: center;
       background: linear-gradient(135deg, #1F2E5C, #0E1B3D);
-      box-shadow: inset 0 0 20px rgba(84,112,255,0.4);
+      box-shadow: inset 0 0 20px rgba(84, 112, 255, 0.4);
+      flex-shrink: 0;
     }
+
     header.hero h1 {
       font-size: 3.2rem;
       margin-bottom: 0.5rem;
       color: #5470FF;
-      text-shadow: 0 0 10px rgba(84,112,255,0.9);
+      text-shadow: 0 0 10px rgba(84, 112, 255, 0.9);
     }
+
     header.hero p {
       font-size: 1.3rem;
       max-width: 700px;
       margin: 0 auto;
       color: #B0BBFF;
     }
+
     main {
       max-width: 900px;
       margin: 2rem auto 4rem;
       padding: 0 1rem;
+      flex-grow: 1;
     }
-    article.article-container {
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #7C9EFF;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      margin-bottom: 1.25rem;
+      font-size: 1.1rem;
+      color: #D3DBFF;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
       background-color: #1B2A6A;
       border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 0 20px rgba(84,112,255,0.25);
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 0 20px rgba(84, 112, 255, 0.25);
       color: #D3DBFF;
       font-size: 1.1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
     }
-    article h1, article h2 {
-      color: #7C9EFF;
+
+    .card:focus,
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(84, 112, 255, 0.5);
+      outline: none;
+    }
+
+    .card h3 {
       margin-top: 0;
-    }
-    article h1 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-    }
-    article h2 {
-      font-size: 2rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
-    article p {
-      margin-bottom: 1.25rem;
-    }
-    article ul {
-      padding-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    article ul li {
+      color: #AFC7FF;
+      font-size: 1.5rem;
       margin-bottom: 0.8rem;
-      list-style-type: disc;
-      color: #B0BBFF;
     }
-    .responsive-img {
-      display: block;
-      max-width: 100%;
-      height: auto;
+
+    .btn {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.5rem 1rem;
+      background-color: #5470FF;
+      color: #E0E7FF;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background-color: #3a54d6;
+      outline-offset: 3px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin-top: 1rem;
+    }
+
+    .contact-form label {
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: #AFC7FF;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #5470FF;
+      background-color: #0E1B3D;
+      color: #E0E7FF;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #AFC7FF;
+      box-shadow: 0 0 5px #5470FF;
+    }
+
+    #mappa {
+      margin-top: 2rem;
+      max-width: 600px;
+      width: 100%;
       border-radius: 12px;
+      overflow: hidden;
       box-shadow: 0 5px 15px rgba(84,112,255,0.4);
-      margin: 2rem auto;
     }
+
     footer {
       background-color: #142859;
       color: #9CADFF;
@@ -110,7 +195,9 @@
       padding: 1.2rem 1rem;
       font-size: 0.9rem;
       border-top: 3px solid #5470FF;
+      flex-shrink: 0;
     }
+
     @media (max-width: 600px) {
       header.hero h1 {
         font-size: 2rem;
@@ -118,52 +205,114 @@
       header.hero p {
         font-size: 1rem;
       }
-      article.article-container {
-        padding: 1.5rem;
-        font-size: 1rem;
+      main {
+        margin: 1rem auto 2rem;
+      }
+      .cards {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        gap: 1rem;
+        padding: 0.8rem 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <nav role="navigation" aria-label="Menu principale">
-    <a href="#chi-siamo">Chi siamo</a>
-    <a href="#servizi">Servizi</a>
-    <a href="#notizie">Notizie</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
 
-  <header class="hero" role="banner">
-    <h1>Proteggi la tua azienda dal social engineering</h1>
-    <p>Formazione, simulazioni e soluzioni concrete per rendere il tuo team pronto a reagire alle minacce umane.</p>
-  </header>
+<nav role="navigation" aria-label="Menu principale">
+  <a href="#chi-siamo">Chi siamo</a>
+  <a href="#servizi">Servizi</a>
+  <a href="#notizie">Notizie</a>
+  <a href="#contatti">Contatti</a>
+</nav>
 
-  <main>
-    <article class="article-container" tabindex="-1">
-      <h1>ClickFix: Quando il copia e incolla diventa un’arma</h1>
-      <p>Nel 2024 è emersa una nuova tecnica di social engineering denominata <strong>ClickFix</strong>. Si basa sull'abuso della fiducia visiva dell'utente durante il copia-incolla da documenti o email compromesse.</p>
+<header class="hero" role="banner">
+  <h1>Proteggi la tua azienda dal social engineering</h1>
+  <p>Formazione, simulazioni e soluzioni concrete per rendere il tuo team pronto a reagire alle minacce umane.</p>
+</header>
 
-      <img src="img.png" alt="Esempio tattica ClickFix" class="responsive-img" />
+<main>
 
-      <h2>Come funziona</h2>
-      <p>ClickFix sfrutta contenuti HTML mascherati: ciò che l'utente vede sullo schermo non corrisponde a ciò che viene copiato. Ad esempio, un link apparentemente sicuro può essere sostituito da un URL malevolo durante il copia-incolla.</p>
+  <section id="chi-siamo" tabindex="-1" class="section">
+    <h2>Chi siamo</h2>
+    <p>Il Social Engineering è l'arte di manipolare le persone per ottenere informazioni riservate o accesso a sistemi protetti. È una minaccia in crescita nel mondo della cybersecurity, che si basa sulla psicologia umana piuttosto che sulle falle tecnologiche.</p>
+    <p>Gli attaccanti sfruttano tecniche quali la falsa fiducia, l'urgenza indotta e l'autorità apparente per compromettere la sicurezza aziendale. La consapevolezza e una formazione mirata rappresentano le armi più efficaci per proteggersi da queste minacce.</p>
+  </section>
 
-      <h2>Perché è pericoloso</h2>
-      <p>La tecnica è quasi invisibile, perché il contenuto copiato sembra legittimo. Questo la rende estremamente insidiosa, soprattutto in ambienti in cui gli utenti copiano e incollano password, URL o comandi in terminali.</p>
+  <section id="servizi" class="section">
+    <h2>I nostri servizi</h2>
+    <div class="cards">
+      <article class="card" tabindex="0">
+        <h3>Audit di sicurezza umana</h3>
+        <p>Analisi approfondite per identificare le vulnerabilità legate al comportamento del personale.</p>
+      </article>
+      <article class="card" tabindex="0">
+        <h3>Formazione personalizzata</h3>
+        <p>Corsi su misura per il tuo team, per riconoscere e prevenire tentativi di social engineering.</p>
+      </article>
+      <article class="card" tabindex="0">
+        <h3>Simulazioni di attacchi reali</h3>
+        <p>Test pratici e scenari realistici per mettere alla prova la resilienza della tua organizzazione.</p>
+      </article>
+      <article class="card" tabindex="0">
+        <h3>Phishing e spear phishing</h3>
+        <p>Simulazioni e prevenzione degli attacchi via email mirati per ingannare il personale.</p>
+      </article>
+      <article class="card" tabindex="0">
+        <h3>Pretexting</h3>
+        <p>Strategie per riconoscere e difendersi da chi si finge una persona autorizzata per ottenere informazioni.</p>
+      </article>
+      <article class="card" tabindex="0">
+        <h3>Tailgating e accesso fisico</h3>
+        <p>Consapevolezza e tecniche per prevenire accessi non autorizzati agli spazi aziendali.</p>
+      </article>
+    </div>
+  </section>
 
-      <h2>Come proteggersi</h2>
-      <ul>
-        <li>Verifica sempre i contenuti incollati, soprattutto se provengono da fonti non verificate.</li>
-        <li>Evita di incollare comandi direttamente nei terminali da email o chat.</li>
-        <li>Utilizza strumenti che evidenziano differenze tra testo visibile e contenuto reale (es. editor sicuri).</li>
-      </ul>
+  <section id="notizie" class="section">
+    <h2>Notizie & approfondimenti</h2>
+    <div class="cards">
+      <article class="card" tabindex="0">
+        <h3>Quando il copia e incolla diventa un’arma: ClickFix</h3>
+        <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nel 2024, con focus sulle varianti osservate nelle campagne che colpiscono utenti privati e aziende.</p>
+        <a href="githubnotiziaclicfix.html" class="btn" target="_blank" rel="noopener noreferrer">Leggi l'articolo completo</a>
+      </article>
+    </div>
+  </section>
 
-      <p>Rimani aggiornato sulle minacce emergenti e sensibilizza il tuo team su questo tipo di attacchi invisibili ma estremamente efficaci.</p>
-    </article>
-  </main>
+  <section id="contatti" tabindex="-1" class="section">
+    <h2>Contattaci</h2>
+    <p>Scrivici per richiedere informazioni o un preventivo personalizzato.</p>
+    <form action="#" method="post" aria-label="Modulo di contatto" class="contact-form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="La tua email" required />
+      <label for="messaggio">Messaggio:</label>
+      <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
+      <button type="submit" class="btn">Invia</button>
+    </form>
 
-  <footer role="contentinfo">
-    &copy; 2025 Protezione Social Engineering - Tutti i diritti riservati
-  </footer>
+    <div id="mappa" aria-label="Mappa della nostra sede">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.027011350545!2d9.191382415497598!3d45.46466497910112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6f49c7421b1%3A0xe10a1373b382870d!2sPiazza%20del%20Duomo%2C%2012012%20Milano%20MI%2C%20Italia!5e0!3m2!1sit!2sus!4v1688234743221!5m2!1sit!2sus" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade" 
+        title="Mappa della sede in Piazza del Duomo, Milano">
+      </iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  &copy; 2025 Protezione Social Engineering - Tutti i diritti riservati
+</footer>
+
 </body>
 </html>
