@@ -300,6 +300,10 @@
             <li>Formare il personale aziendale per riconoscere queste tattiche</li>
             <li>Utilizzare strumenti di sicurezza che monitorano attività sospette</li>
           </ul>
+
+          <button class="accordion-btn" aria-expanded="true" aria-controls="clickfix-content" id="clickfix-close-btn" style="margin-top: 1rem;">
+            Chiudi l'articolo
+          </button>
         </div>
       </article>
     </div>
@@ -324,20 +328,27 @@
 </main>
 
 <footer>
-  <p>&copy; 2025 Protezione Social Engineering - Tutti i diritti riservati</p>
+  &copy; 2025 Protezione Social Engineering - Tutti i diritti riservati
 </footer>
 
 <script>
-  const btn = document.getElementById('clickfix-btn');
+  // Seleziona i bottoni e il contenuto da mostrare/nascondere
+  const openBtn = document.getElementById('clickfix-btn');
+  const closeBtn = document.getElementById('clickfix-close-btn');
   const content = document.getElementById('clickfix-content');
 
-  btn.addEventListener('click', () => {
-    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!isExpanded));
-    content.hidden = isExpanded;
-    if (!isExpanded) {
-      content.focus();
-    }
+  openBtn.addEventListener('click', () => {
+    content.hidden = false;
+    openBtn.setAttribute('aria-expanded', 'true');
+    openBtn.style.display = 'none';
+    content.focus();
+  });
+
+  closeBtn.addEventListener('click', () => {
+    content.hidden = true;
+    openBtn.setAttribute('aria-expanded', 'false');
+    openBtn.style.display = 'inline-block';
+    openBtn.focus();
   });
 </script>
 
