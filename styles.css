@@ -6,6 +6,13 @@ body {
   margin: 0;
   padding: 0;
 }
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  margin: 1rem 0;
+}
 
 /* Nav */
 nav {
