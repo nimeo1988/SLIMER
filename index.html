@@ -282,45 +282,26 @@
             <li><strong>finti messaggi di errore:</strong> le pagine o documenti conterranno finti file Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom, Teams) e siti noti con presunti errori ed un pulsante da cliccare per risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al click viene copiato un codice ad insaputa della vittima e contestualmente vengono mostrate delle istruzioni da seguire. Alcune varianti della campagna non contengono il bottone da cliccare ma mostrano direttamente il codice da copiare con le relative istruzioni.</li>
           </ul>
 
-          <img src="img.png" alt="Esempio codice da copiare e incollare" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Google_Captcha_logo.svg/1920px-Google_Captcha_logo.svg.png" alt="Logo CAPTCHA usato come pretesto per ClickFix" />
 
-          <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui incollare ed eseguire il codice:</p>
-
-          <ol>
-            <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
-            <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
-            <li>Finestre di terminale, sia CMD che PowerShell</li>
-          </ol>
-
-          <p>Per difendersi da queste campagne è bene seguire le seguenti regole:</p>
-
-          <ul>
-            <li>Non incollare mai codice copiato da fonti non verificate o non ufficiali</li>
-            <li>Non aprire mai allegati o link sospetti, specialmente se richiesti improvvisamente</li>
-            <li>Formare il personale aziendale per riconoscere queste tattiche</li>
-            <li>Utilizzare strumenti di sicurezza che monitorano attività sospette</li>
-          </ul>
-
-          <button class="accordion-btn" aria-expanded="true" aria-controls="clickfix-content" id="clickfix-close-btn" style="margin-top: 1rem;">
-            Chiudi l'articolo
-          </button>
+          <p>ClickFix è una tecnica che sfrutta la disattenzione e la scarsa conoscenza tecnica per aggirare le protezioni più comuni basate su tecnologia. Il successo della campagna dimostra quanto sia fondamentale il fattore umano nella cybersecurity.</p>
         </div>
       </article>
     </div>
   </section>
 
+  <section id="mappa" class="section" aria-labelledby="mappa-title">
+    <h2 id="mappa-title">Dove siamo</h2>
+    <div style="width: 100%; height: 400px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086540060784!2d12.492230615316848!3d41.89021037922153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61a1c2a30bd7%3A0x7c0d6cde2af94ee0!2sColosseo!5e0!3m2!1sit!2sit!4v1623957489762!5m2!1sit!2sit"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Mappa Google della nostra sede"></iframe>
+    </div>
+  </section>
+
   <section id="contatti" class="section" aria-labelledby="contatti-title">
     <h2 id="contatti-title">Contatti</h2>
-    <!-- Nuova sezione mappa -->
-<section id="mappa" class="section" aria-labelledby="mappa-title">
-  <h2 id="mappa-title">Dove siamo</h2>
-  <div style="width: 100%; height: 400px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086540060784!2d12.492230615316848!3d41.89021037922153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61a1c2a30bd7%3A0x7c0d6cde2af94ee0!2sColosseo!5e0!3m2!1sit!2sit!4v1623957489762!5m2!1sit!2sit"
-      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
-      title="Mappa Google della nostra sede"></iframe>
-  </div>
-</section>
 
     <form class="contact-form" action="#" method="post" aria-label="Modulo di contatto">
       <label for="nome">Nome</label>
@@ -338,28 +319,28 @@
 
 </main>
 
-<footer>
-  &copy; 2025 Protezione Social Engineering - Tutti i diritti riservati
+<footer role="contentinfo">
+  <p>&copy; 2025 Protezione Social Engineering. Tutti i diritti riservati.</p>
 </footer>
 
 <script>
-  // Seleziona i bottoni e il contenuto da mostrare/nascondere
-  const openBtn = document.getElementById('clickfix-btn');
-  const closeBtn = document.getElementById('clickfix-close-btn');
-  const content = document.getElementById('clickfix-content');
-
-  openBtn.addEventListener('click', () => {
-    content.hidden = false;
-    openBtn.setAttribute('aria-expanded', 'true');
-    openBtn.style.display = 'none';
-    content.focus();
-  });
-
-  closeBtn.addEventListener('click', () => {
-    content.hidden = true;
-    openBtn.setAttribute('aria-expanded', 'false');
-    openBtn.style.display = 'inline-block';
-    openBtn.focus();
+  // Accordion toggle for notizie section
+  document.querySelectorAll('.accordion-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!expanded));
+      const content = document.getElementById(button.getAttribute('aria-controls'));
+      if (content) {
+        if (expanded) {
+          content.hidden = true;
+          content.setAttribute('tabindex', '-1');
+        } else {
+          content.hidden = false;
+          content.setAttribute('tabindex', '0');
+          content.focus();
+        }
+      }
+    });
   });
 </script>
 
