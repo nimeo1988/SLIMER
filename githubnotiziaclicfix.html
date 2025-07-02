@@ -3,74 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quando il copia e incolla diventa un'arma: ClickFix</title>
+  <title>ClickFix - Protezione Social Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Qui inserisci il CSS che mi hai fornito */
+    body {
+      background-color: #1A2A6C;
+      color: #FFFFFF;
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+      margin: 1rem 0;
+    }
+    nav {
+      background-color: #16225C;
+      padding: 1.2rem 2rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #4A90E2;
+    }
+    nav a {
+      color: #7FB3FF;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #A9C8FF;
+      text-decoration: underline;
+    }
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #4A90E2;
+      text-shadow: 0 0 8px rgba(74, 144, 226, 0.7);
+    }
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #B0C7FF;
+    }
+    section, main, footer {
+      padding: 2rem;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #4A90E2;
+      margin-bottom: 1rem;
+    }
+    section h3 {
+      font-size: 1.3rem;
+      color: #7FB3FF;
+    }
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #D0DFFB;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #3B5998;
+      border-radius: 12px;
+      padding: 1.5rem;
+      color: #FFFFFF;
+      box-shadow: 0 4px 8px rgba(58, 89, 152, 0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover,
+    .card:focus {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(74, 144, 226, 0.7);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #A9C8FF;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #4A90E2;
+      border: none;
+      border-radius: 8px;
+      color: #FFFFFF;
+      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1rem;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn:hover,
+    .btn:focus {
+      background-color: #357ABD;
+      box-shadow: 0 0 8px #357ABD;
+      outline: none;
+    }
+    form {
+      max-width: 600px;
+      margin-top: 2rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #A9C8FF;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      background-color: #3B5998;
+      border: 2px solid #4A90E2;
+      border-radius: 8px;
+      color: #FFFFFF;
+      padding: 0.75rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #7FB3FF;
+      box-shadow: 0 0 8px #7FB3FF;
+      outline: none;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: #B0C7FF;
+    }
+    #contatti #mappa {
+      margin-top: 2rem;
+      max-width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(58, 89, 152, 0.7);
+      position: relative;
+      padding-top: 56.25%;
+    }
+    #contatti #mappa iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+      border: 0;
+    }
+    footer {
+      background-color: #16225C;
+      color: #7FB3FF;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      border-top: 2px solid #4A90E2;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Container per testo + immagine */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      color: #D0DFFB;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <a href="#chi-siamo">Chi siamo</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#notizie">Notizie</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
 
-<nav>
-  <a href="index.html#chi-siamo">Chi siamo</a>
-  <a href="index.html#servizi">Servizi</a>
-  <a href="index.html#notizie">Notizie</a>
-  <a href="index.html#contatti">Contatti</a>
-</nav>
+  <header class="hero" role="banner">
+    <h1>Proteggi la tua azienda dal social engineering</h1>
+    <p>Formazione, simulazioni e soluzioni concrete per rendere il tuo team pronto a reagire alle minacce umane.</p>
+  </header>
 
-<header class="hero" role="banner">
-  <h1>Quando il copia e incolla diventa un'arma: ClickFix</h1>
-  <p>Scopri come una semplice azione può trasformarsi in una tecnica di attacco efficace e subdola.</p>
-</header>
+  <main>
+    <article class="article-container" tabindex="-1">
+      <h1>ClickFix: Quando il copia e incolla diventa un’arma</h1>
+      <p>Nel 2024 è emersa una nuova tecnica di social engineering denominata <strong>ClickFix</strong>. Si basa sull'abuso della fiducia visiva dell'utente durante il copia-incolla da documenti o email compromesse.</p>
 
-<main>
-  <section class="section">
-    <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime a incollare ed eseguire comandi malevoli su dispositivi desktop Windows.</p>
+      <img src="img.png" alt="Esempio tattica ClickFix" class="responsive-img" />
 
-    <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato. L’obiettivo è spingere l’utente ad eseguire dei comandi senza comprenderne le conseguenze.</p>
+      <h2>Come funziona</h2>
+      <p>ClickFix sfrutta contenuti HTML mascherati: ciò che l'utente vede sullo schermo non corrisponde a ciò che viene copiato. Ad esempio, un link apparentemente sicuro può essere sostituito da un URL malevolo durante il copia-incolla.</p>
 
-    <p>Le tecniche più comuni includono:</p>
+      <h2>Perché è pericoloso</h2>
+      <p>La tecnica è quasi invisibile, perché il contenuto copiato sembra legittimo. Questo la rende estremamente insidiosa, soprattutto in ambienti in cui gli utenti copiano e incollano password, URL o comandi in terminali.</p>
 
-    <ul>
-      <li><strong>Finti CAPTCHA:</strong> cliccando sul CAPTCHA, l’utente copia inconsapevolmente codice malevolo, che poi viene incollato ed eseguito seguendo istruzioni fuorvianti.</li>
-      <li><strong>Finti messaggi di errore:</strong> documenti o pagine mostrano errori fasulli e propongono azioni correttive che implicano l’esecuzione di codice copiato.</li>
-    </ul>
+      <h2>Come proteggersi</h2>
+      <ul>
+        <li>Verifica sempre i contenuti incollati, soprattutto se provengono da fonti non verificate.</li>
+        <li>Evita di incollare comandi direttamente nei terminali da email o chat.</li>
+        <li>Utilizza strumenti che evidenziano differenze tra testo visibile e contenuto reale (es. editor sicuri).</li>
+      </ul>
 
-    <img src="img.png" alt="Esempio tattica ClickFix" />
+      <p>Rimani aggiornato sulle minacce emergenti e sensibilizza il tuo team su questo tipo di attacchi invisibili ma estremamente efficaci.</p>
+    </article>
+  </main>
 
-    <p>Le destinazioni dove gli utenti incollano questi comandi sono spesso:</p>
-    <ol>
-      <li>la finestra Esegui (WIN + R)</li>
-      <li>la barra degli indirizzi di Esplora Risorse (WIN + E)</li>
-      <li>terminali come CMD o PowerShell (WIN + X)</li>
-    </ol>
-
-    <p>Per difendersi da questa tecnica, si consiglia:</p>
-    <ul>
-      <li><strong>Disabilitare la finestra "Esegui":</strong> modificando il registro di sistema con:
-        <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer</code> → DWORD <code>NoRun</code> = <code>1</code>
-      </li>
-
-      <li><strong>Bloccare CMD e PowerShell:</strong>
-        <ul>
-          <li><code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows</code> → DWORD <code>DisableCMD</code> = <code>1</code></li>
-          <li><code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\PowerShell</code> → DWORD <code>DisablePowerShell</code> = <code>1</code></li>
-        </ul>
-      </li>
-
-      <li><strong>Bloccare la clipboard in modo automatico:</strong> uno script PowerShell in background può sovrascriverla ogni 100 secondi:
-        <pre><code>
-while($true){
-  Set-Clipboard -Value "La Clipboard è stata disabilitata su questo dispositivo"
-  Start-Sleep -Seconds 100
-}
-        </code></pre>
-      </li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Protezione Social Engineering - Tutti i diritti riservati
-</footer>
-
+  <footer>
+    &copy; 2025 Protezione Social Engineering - Tutti i diritti riservati
+  </footer>
 </body>
 </html>
