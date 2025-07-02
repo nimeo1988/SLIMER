@@ -69,28 +69,45 @@
     </div>
   </section>
 
-  <section id="contatti" tabindex="-1">
-    <h2>Contatti</h2>
-    <p>Scrivici per scoprire come possiamo aiutarti a proteggere il tuo team dalle minacce umane.</p>
-    <p><strong>Prova</strong><br />
-       Sede legale: Benevento (BN)<br />
-       P.IVA: 01772560627
-    </p>
-    <a href="mailto:info@prova.it" class="btn" aria-label="Scrivi una mail a info@prova.it">Scrivici ora</a>
+ <section id="contatti" tabindex="-1">
+  <h2>Contatti</h2>
+  <p>Scrivici per scoprire come possiamo aiutarti a proteggere il tuo team dalle minacce umane.</p>
+  <p><strong>Prova</strong><br />
+     Sede legale: Benevento (BN)<br />
+     P.IVA: 01772560627
+  </p>
 
-    <form action="https://formspree.io/f/mlekyvkn" method="POST" aria-label="Modulo di contatto">
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" required placeholder="Il tuo nome" />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="_replyto" required placeholder="La tua email" />
-
-      <label for="messaggio">Messaggio</label>
-      <textarea id="messaggio" name="messaggio" rows="5" required placeholder="Scrivi qui il tuo messaggio"></textarea>
-
-      <button type="submit" class="btn">Invia</button>
-    </form>
+  <!-- Qui la mappa -->
+  <section id="mappa" aria-label="Mappa della sede legale">
+    <h3>Dove siamo</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18808.71937317229!2d14.78496349740905!3d41.129041054332816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b90fa6d5446ff%3A0xb9a97e6d4cdaee28!2sBenevento%2C%20BN%2C%20Italia!5e0!3m2!1sit!2sit!4v1688200000000!5m2!1sit!2sit"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Mappa di Benevento">
+    </iframe>
   </section>
+
+  <a href="mailto:info@prova.it" class="btn" aria-label="Scrivi una mail a info@prova.it">Scrivici ora</a>
+
+  <form action="https://formspree.io/f/mlekyvkn" method="POST" aria-label="Modulo di contatto">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" required placeholder="Il tuo nome" />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="_replyto" required placeholder="La tua email" />
+
+    <label for="messaggio">Messaggio</label>
+    <textarea id="messaggio" name="messaggio" rows="5" required placeholder="Scrivi qui il tuo messaggio"></textarea>
+
+    <button type="submit" class="btn">Invia</button>
+  </form>
+</section>
+
 </main>
 
 <footer>
