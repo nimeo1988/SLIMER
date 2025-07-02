@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PROVA – Sicurezza e Social Engineering</title>
-  <!-- Google Fonts: Roboto -->
+  <title>Protezione Social Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <!-- Collegamento al CSS esterno -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<nav>
-  <a href="#chi-siamo">Chi siamo</a>
-  <a href="#servizi">Servizi</a>
-  <a href="#contatti">Contatti</a>
+<nav role="navigation" aria-label="Menu principale">
+  <ul class="nav-list">
+    <li><a href="#chi-siamo">Chi siamo</a></li>
+    <li><a href="#servizi">Servizi</a></li>
+    <li><a href="#notizie">Notizie</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+  </ul>
 </nav>
 
-<section class="hero" role="banner">
+<header class="hero" role="banner">
   <h1>Proteggi la tua azienda dal social engineering</h1>
   <p>Formazione, simulazioni e soluzioni concrete per rendere il tuo team pronto a reagire alle minacce umane.</p>
-</section>
+</header>
 
 <main>
   <section id="chi-siamo" tabindex="-1">
@@ -29,7 +30,7 @@
     <p>Gli attaccanti sfruttano tecniche quali la falsa fiducia, l'urgenza indotta e l'autorità apparente per compromettere la sicurezza aziendale. La consapevolezza e una formazione mirata rappresentano le armi più efficaci per proteggersi da queste minacce.</p>
   </section>
 
-  <section id="servizi">
+  <section id="servizi" tabindex="-1">
     <h2>I nostri servizi</h2>
     <div class="cards" role="list">
       <article class="card" role="listitem" tabindex="0">
@@ -59,7 +60,7 @@
     </div>
   </section>
 
-  <section id="notizie">
+  <section id="notizie" tabindex="-1">
     <h2>Notizie & approfondimenti</h2>
     <div class="cards" role="list">
       <article class="card" role="listitem" tabindex="0">
@@ -83,10 +84,13 @@
     <form action="#" method="post" aria-label="Modulo di contatto">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required />
+      
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="La tua email" required />
+      
       <label for="messaggio">Messaggio:</label>
       <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
+      
       <button type="submit" class="btn">Invia</button>
     </form>
 
