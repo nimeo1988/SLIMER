@@ -263,33 +263,71 @@
     </div>
   </section>
 
-  <section id="notizie" class="section" aria-labelledby="notizie-title">
-    <h2 id="notizie-title">Notizie & approfondimenti</h2>
-    <div class="cards" role="list">
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Quando il copia e incolla diventa un’arma: ClickFix</h3>
-        <p>Il post illustra ClickFix, la recente tattica di Social Engineering diffusa nel 2024, con focus sulle varianti osservate nelle campagne che colpiscono utenti privati e aziende.</p>
-        <button class="accordion-btn" aria-expanded="false" aria-controls="clickfix-content" id="clickfix-btn">
-          Leggi l'articolo completo
-        </button>
-        <div id="clickfix-content" class="accordion-content" hidden tabindex="0">
-          <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
+ <section id="notizie" class="section" aria-labelledby="notizie-title">
+  <h2 id="notizie-title">Notizie & approfondimenti</h2>
+  <div class="cards" role="list">
+    <article class="card" tabindex="0" role="listitem">
+      <h3>ClickFix: Quando il copia e incolla diventa un’arma</h3>
+      <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024, inducendo le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows.</p>
+      <button class="accordion-btn" aria-expanded="false" aria-controls="clickfix-content" id="clickfix-btn">
+        Leggi l'articolo completo
+      </button>
+      <div id="clickfix-content" class="accordion-content" hidden tabindex="0">
+        <article class="article-container" tabindex="-1">
+          <h1>ClickFix: Quando il copia e incolla diventa un’arma</h1>
 
-          <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata dall’attore malevolo o inducendola ad aprire un documento inviato in allegato che conterranno il pretesto per spingere la vittima ad eseguire i comandi. Gli attaccanti utilizzano due principali pretesti:</p>
+          <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del
+          2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi
+          malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie
+          con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
+
+          <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata
+          dall’attore malevolo o inducendola ad aprire un documento inviato in allegato
+          che conterranno il pretesto per spingere la vittima ad eseguire i comandi.
+          Gli attaccanti utilizzano due principali pretesti:</p>
 
           <ul>
-            <li><strong>finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul CAPTCHA che copierà a sua insaputa un codice malevolo negli appunti. Successivamente gli verranno mostrate delle finte istruzioni per risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo premendo invio.</li>
-            <li><strong>finti messaggi di errore:</strong> le pagine o documenti conterranno finti file Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom, Teams) e siti noti con presunti errori ed un pulsante da cliccare per risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al click viene copiato un codice ad insaputa della vittima e contestualmente vengono mostrate delle istruzioni da seguire. Alcune varianti della campagna non contengono il bottone da cliccare ma mostrano direttamente il codice da copiare con le relative istruzioni.</li>
+            <li><strong>finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul
+            CAPTCHA che copierà a sua insaputa un codice malevolo negli
+            appunti. Successivamente gli verranno mostrate delle finte istruzioni per
+            risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo
+            premendo invio.</li>
+
+            <li><strong>finti messaggi di errore:</strong> le pagine o documenti conterranno finti file
+            Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom,
+            Teams) e siti noti con presunti errori ed un pulsante da cliccare per
+            risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al
+            click viene copiato un codice ad insaputa della vittima e
+            contestualmente vengono mostrate delle istruzioni da seguire. Alcune
+            varianti della campagna non contengono il bottone da cliccare ma
+            mostrano direttamente il codice da copiare con le relative istruzioni.</li>
           </ul>
 
-          <img src="img.png" alt="Immagine descrittiva di ClickFix" />
+          <img src="img.png" alt="Esempio codice da copiare e incollare" class="responsive-img" />
 
+          <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui
+          incollare ed eseguire il codice:</p>
 
-          <p>ClickFix è una tecnica che sfrutta la disattenzione e la scarsa conoscenza tecnica per aggirare le protezioni più comuni basate su tecnologia. Il successo della campagna dimostra quanto sia fondamentale il fattore umano nella cybersecurity.</p>
-        </div>
-      </article>
-    </div>
-  </section>
+          <ol>
+            <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
+            <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
+            <li>Finestre di terminale, sia CMD che PowerShell</li>
+          </ol>
+
+          <p>Per difendersi da queste campagne è bene seguire le seguenti regole:</p>
+
+          <ul>
+            <li>Non incollare mai codice copiato da fonti non verificate o non ufficiali</li>
+            <li>Non aprire mai allegati o link sospetti, specialmente se richiesti improvvisamente</li>
+            <li>Formare il personale aziendale per riconoscere queste tattiche</li>
+            <li>Utilizzare strumenti di sicurezza che monitorano attività sospette</li>
+          </ul>
+        </article>
+      </div>
+    </article>
+  </div>
+</section>
+
 
   <section id="mappa" class="section" aria-labelledby="mappa-title">
     <h2 id="mappa-title">Dove siamo</h2>
