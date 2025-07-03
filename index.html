@@ -326,23 +326,26 @@
 
 <script>
   // Accordion toggle for notizie section
-  document.querySelectorAll('.accordion-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const expanded = button.getAttribute('aria-expanded') === 'true';
-      button.setAttribute('aria-expanded', String(!expanded));
-      const content = document.getElementById(button.getAttribute('aria-controls'));
-      if (content) {
-        if (expanded) {
-          content.hidden = true;
-          content.setAttribute('tabindex', '-1');
-        } else {
-          content.hidden = false;
-          content.setAttribute('tabindex', '0');
-          content.focus();
-        }
+document.querySelectorAll('.accordion-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!expanded));
+    const content = document.getElementById(button.getAttribute('aria-controls'));
+    if (content) {
+      if (expanded) {
+        content.hidden = true;
+        content.setAttribute('tabindex', '-1');
+        button.textContent = "Leggi l'articolo completo";
+      } else {
+        content.hidden = false;
+        content.setAttribute('tabindex', '0');
+        content.focus();
+        button.textContent = "Chiudi articolo";
       }
-    });
+    }
   });
+});
+
 </script>
 
 </body>
