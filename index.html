@@ -1,205 +1,107 @@
-/* Base Reset */
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: 'Roboto', Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #0a0a0a; /* nero molto scuro */
-  color: #eee; /* bianco/grigio chiaro per testo */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Social Engineering Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-/* NAVBAR */
-nav {
-  background-color: #121212; /* nero scuro */
-  padding: 1.2rem 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 2px solid #d32f2f; /* rosso “pericolo” */
-}
-nav a {
-  color: #d32f2f;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-nav a:hover,
-nav a:focus {
-  color: #fff;
-  text-decoration: underline;
-  outline: none;
-}
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Servizi</a>
+    <a href="#about">Chi Siamo</a>
+    <a href="#contact">Contatti</a>
+  </nav>
 
-/* HERO */
-.hero {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #d32f2f;
-  text-shadow: 0 0 10px rgba(211, 47, 47, 0.8);
-}
-.hero p {
-  font-size: 1.4rem;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #ccc;
-}
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h1>Social Engineering Services</h1>
+    <p>Proteggi la tua azienda con strategie avanzate di ingegneria sociale e sicurezza informatica.</p>
+  </section>
 
-/* MAIN */
-main {
-  flex: 1;
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  width: 90%;
-}
+  <!-- MAIN CONTENT -->
+  <main>
 
-/* Sections */
-.section {
-  margin-bottom: 3rem;
-}
+    <!-- SERVICES SECTION -->
+    <section class="section" id="services">
+      <h2>Servizi Offerti</h2>
+      <div class="cards">
+        <article class="card" tabindex="0">
+          <h3>Phishing Simulation</h3>
+          <p>Testiamo la tua azienda con campagne di phishing realistiche per individuare vulnerabilità umane.</p>
+          <button class="accordion-btn" aria-expanded="false" aria-controls="phishing-desc">Dettagli</button>
+          <div class="accordion-content" id="phishing-desc" hidden>
+            <p>Campagne personalizzate per aumentare la consapevolezza e ridurre i rischi.</p>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>Social Engineering Audit</h3>
+          <p>Analizziamo i punti deboli nei processi e nelle comunicazioni per prevenire attacchi mirati.</p>
+          <button class="accordion-btn" aria-expanded="false" aria-controls="audit-desc">Dettagli</button>
+          <div class="accordion-content" id="audit-desc" hidden>
+            <p>Valutazione approfondita con report dettagliati e soluzioni pratiche.</p>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>Formazione Personalizzata</h3>
+          <p>Corsi e workshop per formare i tuoi dipendenti sulle tecniche di attacco e difesa.</p>
+          <button class="accordion-btn" aria-expanded="false" aria-controls="training-desc">Dettagli</button>
+          <div class="accordion-content" id="training-desc" hidden>
+            <p>Sessioni interattive per aumentare la consapevolezza e migliorare la sicurezza.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-/* Cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.card {
-  background-color: #1c1c1c; /* nero scuro ma più chiaro */
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
-  transition: background-color 0.3s ease;
-}
-.card:focus,
-.card:hover {
-  background-color: #2a2a2a;
-  outline: none;
-}
-.card h3 {
-  margin-top: 0;
-  color: #eee;
-}
-.card p {
-  margin-bottom: 1rem;
-  color: #bbb;
-}
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+      <h2>Chi Siamo</h2>
+      <p>Siamo un team di esperti in sicurezza informatica e social engineering con anni di esperienza nel settore. La nostra missione è aiutarti a difendere la tua azienda dagli attacchi più subdoli.</p>
+    </section>
 
-/* Accordion button */
-.accordion-btn {
-  background-color: #d32f2f;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 0.5rem;
-}
-.accordion-btn:hover,
-.accordion-btn:focus {
-  background-color: #a52828; /* rosso scuro */
-  outline: none;
-}
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+      <h2>Contattaci</h2>
+      <form class="contact-form" action="#" method="POST">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required />
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="message">Messaggio</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit" class="btn">Invia</button>
+      </form>
+    </section>
 
-/* Accordion content */
-.accordion-content {
-  margin-top: 1rem;
-  background-color: #121212;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  color: #ddd;
-  line-height: 1.5;
-  box-shadow: inset 0 0 5px rgba(211, 47, 47, 0.5);
-}
-.accordion-content img {
-  max-width: 100%;
-  border-radius: 12px;
-  margin: 1rem 0;
-  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
-}
+  </main>
 
-/* Contact form */
-.contact-form label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-  color: #d32f2f;
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.6rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-  border: none;
-  font-size: 1rem;
-  background-color: #222;
-  color: #eee;
-}
-.contact-form button.btn {
-  background-color: #d32f2f;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.contact-form button.btn:hover,
-.contact-form button.btn:focus {
-  background-color: #a52828;
-  outline: none;
-}
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Social Engineering Services. Tutti i diritti riservati.</p>
+  </footer>
 
-/* Footer */
-footer {
-  background-color: #121212;
-  color: #bbb;
-  text-align: center;
-  padding: 1rem 2rem;
-  font-size: 0.9rem;
-  border-top: 2px solid #d32f2f;
-}
+  <script>
+    // Accordion toggle
+    document.querySelectorAll('.accordion-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = document.getElementById(button.getAttribute('aria-controls'));
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        if (!expanded) {
+          content.hidden = false;
+        } else {
+          content.hidden = true;
+        }
+      });
+    });
+  </script>
 
-/* Accessibility focus */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-  outline: 3px solid #d32f2f;
-  outline-offset: 3px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1.1rem;
-  }
-  main {
-    width: 95%;
-    padding: 1rem;
-  }
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
+</body>
+</html>
