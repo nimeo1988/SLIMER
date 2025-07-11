@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Slimer Srl - Social Engineering</title>
+  <title>Slimer Srl - Social Engineering Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
+    /* Inserisci qui tutto il CSS che mi hai fornito, incluso l'ultimo aggiornamento della navbar */
     /* Base Reset */
     * {
       box-sizing: border-box;
@@ -14,8 +15,8 @@
       margin: 0;
       font-family: 'Roboto', Arial, sans-serif;
       line-height: 1.6;
-      background-color: #0a0a0a; /* nero molto scuro */
-      color: #eee; /* bianco/grigio chiaro per testo */
+      background-color: #0a0a0a;
+      color: #eee;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -26,7 +27,7 @@
       align-items: center;
       justify-content: space-between;
       background-color: #121212; /* nero scuro */
-      padding: 1.2rem 2rem;
+      padding: 1.5rem 2rem;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -36,14 +37,16 @@
     .nav-left, .nav-right {
       display: flex;
       gap: 2rem;
+      flex: 1;
     }
     .nav-center {
-      flex-grow: 1;
       display: flex;
       justify-content: center;
+      flex: 2;
     }
     .logo {
-      height: 40px;
+      height: 80px;
+      object-fit: contain;
     }
     nav a {
       color: #d32f2f;
@@ -51,6 +54,7 @@
       font-weight: 600;
       font-size: 1.1rem;
       transition: color 0.3s ease;
+      align-self: center;
     }
     nav a:hover,
     nav a:focus {
@@ -94,7 +98,7 @@
       gap: 1.5rem;
     }
     .card {
-      background-color: #1c1c1c; /* nero scuro ma più chiaro */
+      background-color: #1c1c1c;
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
@@ -128,7 +132,7 @@
     }
     .accordion-btn:hover,
     .accordion-btn:focus {
-      background-color: #a52828; /* rosso scuro */
+      background-color: #a52828;
       outline: none;
     }
     /* Accordion content */
@@ -213,14 +217,14 @@
         grid-template-columns: 1fr;
       }
       nav {
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 1rem;
       }
-      .nav-center {
-        order: -1;
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 0.5rem;
+      .nav-left, .nav-right, .nav-center {
+        flex: unset;
+      }
+      .logo {
+        height: 60px;
       }
     }
   </style>
@@ -241,8 +245,8 @@
   </nav>
 
   <section class="hero" id="hero">
-    <h1>Slimer Srl - Social Engineering</h1>
-    <p>Servizi professionali di social engineering per la sicurezza informatica e la consapevolezza digitale.</p>
+    <h1>Slimer Srl</h1>
+    <p>Esperti in servizi di Social Engineering per la sicurezza della tua azienda.</p>
   </section>
 
   <main>
@@ -250,41 +254,54 @@
       <h2>Servizi</h2>
       <div class="cards">
         <article class="card" tabindex="0">
-          <h3>Test di Penetrazione Sociale</h3>
-          <p>Simulazioni realistiche per testare la vulnerabilità del personale agli attacchi di ingegneria sociale.</p>
+          <h3>Test di Penetrazione</h3>
+          <p>Simulazioni realistiche per valutare la sicurezza dei sistemi informatici.</p>
         </article>
         <article class="card" tabindex="0">
-          <h3>Formazione Consapevolezza</h3>
-          <p>Corsi e workshop per educare il personale a riconoscere e prevenire attacchi di social engineering.</p>
+          <h3>Formazione</h3>
+          <p>Corsi personalizzati per sensibilizzare il personale contro gli attacchi social engineering.</p>
         </article>
         <article class="card" tabindex="0">
-          <h3>Valutazione Sicurezza</h3>
-          <p>Analisi approfondite delle procedure e delle politiche aziendali per migliorare la sicurezza.</p>
+          <h3>Valutazione Rischi</h3>
+          <p>Analisi approfondita per identificare le vulnerabilità umane e tecniche.</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="about">
       <h2>Chi siamo</h2>
-      <p>Slimer Srl è un'azienda specializzata in sicurezza informatica, con particolare attenzione al social engineering.</p>
+      <p>Slimer Srl è un’azienda leader nel settore della sicurezza informatica e social engineering, con anni di esperienza nella protezione dei dati e della privacy aziendale.</p>
     </section>
 
     <section class="section" id="contact">
       <h2>Contatti</h2>
-      <form class="contact-form" action="#" method="post" aria-label="Modulo di contatto">
+      <form class="contact-form">
         <label for="name">Nome</label>
         <input type="text" id="name" name="name" required />
+
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required />
+
         <label for="message">Messaggio</label>
         <textarea id="message" name="message" rows="5" required></textarea>
+
         <button type="submit" class="btn">Invia</button>
       </form>
+      <div id="map" style="margin-top:2rem; border-radius:12px; overflow:hidden; height:300px;"></div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Slimer Srl - Via Traiano, 45, 82100, Benevento (BN) - P.IVA: 01772560627</p>
+    <p>© 2025 Slimer Srl - Sede legale: Via Traiano, 45, 82100, Benevento (BN) - P.IVA: 01772560627</p>
   </footer>
+
+  <script>
+    // Mappa Google Maps Embed per Via Traiano, 45, Benevento
+    const mapContainer = document.getElementById('map');
+    mapContainer.innerHTML = `<iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.532850922311!2d14.789706715499736!3d41.1293309792729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a4841e2a4e9db%3A0x395ab4a1c4d9eecd!2sVia%20Traiano%2C%2045%2C%2082100%20Benevento%20BN!5e0!3m2!1sit!2sit!4v1691280000000!5m2!1sit!2sit"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>`;
+  </script>
 </body>
 </html>
