@@ -3,105 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Social Engineering Services</title>
+  <title>Slimer Srl - Social Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- NAVBAR -->
   <nav>
-    <a href="#home">Home</a>
+    <a href="#hero">Home</a>
     <a href="#services">Servizi</a>
-    <a href="#about">Chi Siamo</a>
+    <a href="#about">Chi siamo</a>
     <a href="#contact">Contatti</a>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <h1>Social Engineering Services</h1>
-    <p>Proteggi la tua azienda con strategie avanzate di ingegneria sociale e sicurezza informatica.</p>
-  </section>
+  <header class="hero" id="hero">
+    <h1>Slimer Srl - Esperti in Social Engineering</h1>
+    <p>Proteggiamo la tua azienda dalle minacce umane e digitali con soluzioni su misura.</p>
+  </header>
 
-  <!-- MAIN CONTENT -->
   <main>
-
-    <!-- SERVICES SECTION -->
     <section class="section" id="services">
-      <h2>Servizi Offerti</h2>
+      <h2>Servizi</h2>
       <div class="cards">
         <article class="card" tabindex="0">
-          <h3>Phishing Simulation</h3>
-          <p>Testiamo la tua azienda con campagne di phishing realistiche per individuare vulnerabilità umane.</p>
-          <button class="accordion-btn" aria-expanded="false" aria-controls="phishing-desc">Dettagli</button>
-          <div class="accordion-content" id="phishing-desc" hidden>
-            <p>Campagne personalizzate per aumentare la consapevolezza e ridurre i rischi.</p>
-          </div>
+          <h3>Penetration Testing</h3>
+          <p>Simuliamo attacchi mirati per identificare le vulnerabilità della tua azienda.</p>
         </article>
         <article class="card" tabindex="0">
-          <h3>Social Engineering Audit</h3>
-          <p>Analizziamo i punti deboli nei processi e nelle comunicazioni per prevenire attacchi mirati.</p>
-          <button class="accordion-btn" aria-expanded="false" aria-controls="audit-desc">Dettagli</button>
-          <div class="accordion-content" id="audit-desc" hidden>
-            <p>Valutazione approfondita con report dettagliati e soluzioni pratiche.</p>
-          </div>
+          <h3>Formazione e Awareness</h3>
+          <p>Corsi e workshop per sensibilizzare il tuo team sui rischi del social engineering.</p>
         </article>
         <article class="card" tabindex="0">
-          <h3>Formazione Personalizzata</h3>
-          <p>Corsi e workshop per formare i tuoi dipendenti sulle tecniche di attacco e difesa.</p>
-          <button class="accordion-btn" aria-expanded="false" aria-controls="training-desc">Dettagli</button>
-          <div class="accordion-content" id="training-desc" hidden>
-            <p>Sessioni interattive per aumentare la consapevolezza e migliorare la sicurezza.</p>
-          </div>
+          <h3>Audit Sicurezza</h3>
+          <p>Valutiamo le tue policy e procedure per migliorare la sicurezza interna.</p>
         </article>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section class="section" id="about">
-      <h2>Chi Siamo</h2>
-      <p>Siamo un team di esperti in sicurezza informatica e social engineering con anni di esperienza nel settore. La nostra missione è aiutarti a difendere la tua azienda dagli attacchi più subdoli.</p>
+      <h2>Chi siamo</h2>
+      <p>Slimer Srl è un'azienda specializzata in sicurezza informatica con focus sul social engineering. La nostra mission è proteggere le organizzazioni attraverso competenze avanzate e soluzioni innovative.</p>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section class="section" id="contact">
       <h2>Contattaci</h2>
       <form class="contact-form" action="#" method="POST">
         <label for="name">Nome</label>
         <input type="text" id="name" name="name" required />
-        
+
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required />
-        
+
         <label for="message">Messaggio</label>
         <textarea id="message" name="message" rows="5" required></textarea>
-        
+
         <button type="submit" class="btn">Invia</button>
       </form>
-    </section>
 
+      <div style="margin-top: 2rem;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.518464096098!2d14.782494215382414!3d41.129430979298136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133affc574b857f3%3A0x10e6c3314e8b18d!2sVia%20Traiano%2C%2045%2C%2082100%20Benevento%20BN!5e0!3m2!1sit!2sit!4v1693349278373!5m2!1sit!2sit"
+          width="100%"
+          height="300"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mappa Slimer Srl"
+        ></iframe>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Social Engineering Services. Tutti i diritti riservati.</p>
+    <p>© 2025 Slimer Srl - P.IVA: 01772560627</p>
   </footer>
-
-  <script>
-    // Accordion toggle
-    document.querySelectorAll('.accordion-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        const content = document.getElementById(button.getAttribute('aria-controls'));
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !expanded);
-        if (!expanded) {
-          content.hidden = false;
-        } else {
-          content.hidden = true;
-        }
-      });
-    });
-  </script>
-
 </body>
 </html>
