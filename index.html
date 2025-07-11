@@ -2,389 +2,87 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Protezione Social Engineering</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <style>
-    /* Base Reset */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Roboto', Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #1A2A6C;
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* NAVBAR */
-    nav {
-      background-color: #16225C;
-      padding: 1.2rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 2px solid #4A90E2;
-    }
-    nav a {
-      color: #7FB3FF;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-    }
-    nav a:hover,
-    nav a:focus {
-      color: #A9C8FF;
-      text-decoration: underline;
-      outline: none;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #4A90E2;
-      text-shadow: 0 0 8px rgba(74, 144, 226, 0.7);
-    }
-    .hero p {
-      font-size: 1.4rem;
-      max-width: 600px;
-      margin: 0 auto;
-      color: #B0C7FF;
-    }
-
-    /* MAIN */
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-      width: 90%;
-    }
-
-    /* Sections */
-    .section {
-      margin-bottom: 3rem;
-    }
-
-    /* Cards */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background-color: #23307a;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
-      transition: background-color 0.3s ease;
-    }
-    .card:focus,
-    .card:hover {
-      background-color: #2a3a99;
-      outline: none;
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #a9c8ff;
-    }
-    .card p {
-      margin-bottom: 1rem;
-      color: #d0dffb;
-    }
-
-    /* Accordion button */
-    .accordion-btn {
-      background-color: #4A90E2;
-      color: #fff;
-      border: none;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 0.5rem;
-    }
-    .accordion-btn:hover,
-    .accordion-btn:focus {
-      background-color: #3570c9;
-      outline: none;
-    }
-
-    /* Accordion content */
-    .accordion-content {
-      margin-top: 1rem;
-      background-color: #18234f;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      color: #d0dffb;
-      line-height: 1.5;
-      box-shadow: inset 0 0 5px rgba(74, 144, 226, 0.5);
-    }
-    .accordion-content img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin: 1rem 0;
-      box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
-    }
-
-    /* Contact form */
-    .contact-form label {
-      display: block;
-      margin-bottom: 0.3rem;
-      font-weight: 600;
-      color: #a9c8ff;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.6rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      border: none;
-      font-size: 1rem;
-    }
-    .contact-form button.btn {
-      background-color: #4A90E2;
-      color: #fff;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .contact-form button.btn:hover,
-    .contact-form button.btn:focus {
-      background-color: #3570c9;
-      outline: none;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #16225C;
-      color: #7FB3FF;
-      text-align: center;
-      padding: 1rem 2rem;
-      font-size: 0.9rem;
-      border-top: 2px solid #4A90E2;
-    }
-
-    /* Accessibility focus */
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
-      outline: 3px solid #A9C8FF;
-      outline-offset: 3px;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .hero p {
-        font-size: 1.1rem;
-      }
-      main {
-        width: 95%;
-        padding: 1rem;
-      }
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<nav role="navigation" aria-label="Menu principale">
-  <a href="#chi-siamo">Chi siamo</a>
-  <a href="#servizi">Servizi</a>
-  <a href="#notizie">Notizie</a>
-  <a href="#contatti">Contatti</a>
-</nav>
+  <nav>
+    <a href="#about">Chi sono</a>
+    <a href="#projects">Progetti</a>
+    <a href="#contact">Contatti</a>
+  </nav>
 
-<header class="hero" role="banner">
-  <h1>Proteggi la tua azienda dal social engineering</h1>
-  <p>Formazione, simulazioni e soluzioni concrete per rendere il tuo team pronto a reagire alle minacce umane.</p>
-</header>
+  <header class="hero">
+    <h1>Benvenuto nel mio Portfolio</h1>
+    <p>Scopri i miei progetti e le mie esperienze nel mondo dello sviluppo web.</p>
+  </header>
 
-<main>
+  <main>
+    <section id="about" class="section">
+      <h2>Chi sono</h2>
+      <p>Sono uno sviluppatore web appassionato di tecnologia e design. Amo trasformare idee in realtà digitali.</p>
+    </section>
 
-  <section id="chi-siamo" tabindex="-1" class="section" aria-labelledby="chi-siamo-title">
-    <h2 id="chi-siamo-title">Chi siamo</h2>
-    <p>Il Social Engineering è l'arte di manipolare le persone per ottenere informazioni riservate o accesso a sistemi protetti. È una minaccia in crescita nel mondo della cybersecurity, che si basa sulla psicologia umana piuttosto che sulle falle tecnologiche.</p>
-    <p>Gli attaccanti sfruttano tecniche quali la falsa fiducia, l'urgenza indotta e l'autorità apparente per compromettere la sicurezza aziendale. La consapevolezza e una formazione mirata rappresentano le armi più efficaci per proteggersi da queste minacce.</p>
-  </section>
-
-  <section id="servizi" class="section" aria-labelledby="servizi-title">
-    <h2 id="servizi-title">I nostri servizi</h2>
-    <div class="cards" role="list">
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Audit di sicurezza umana</h3>
-        <p>Analisi approfondite per identificare le vulnerabilità legate al comportamento del personale.</p>
-      </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Formazione personalizzata</h3>
-        <p>Corsi su misura per il tuo team, per riconoscere e prevenire tentativi di social engineering.</p>
-      </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Simulazioni di attacchi reali</h3>
-        <p>Test pratici e scenari realistici per mettere alla prova la resilienza della tua organizzazione.</p>
-      </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Phishing e spear phishing</h3>
-        <p>Simulazioni e prevenzione degli attacchi via email mirati per ingannare il personale.</p>
-      </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Pretexting</h3>
-        <p>Strategie per riconoscere e difendersi da chi si finge una persona autorizzata per ottenere informazioni.</p>
-      </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Tailgating e accesso fisico</h3>
-        <p>Consapevolezza e tecniche per prevenire accessi non autorizzati agli spazi aziendali.</p>
-      </article>
-    </div>
-  </section>
-
- <section id="notizie" class="section" aria-labelledby="notizie-title">
-  <h2 id="notizie-title">Notizie & approfondimenti</h2>
-  <div class="cards" role="list">
-    <article class="card" tabindex="0" role="listitem">
-      <h3>ClickFix: Quando il copia e incolla diventa un’arma</h3>
-      <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del 2024, inducendo le vittime ad incollare ed eseguire comandi malevoli su dispositivi desktop Windows.</p>
-      <button class="accordion-btn" aria-expanded="false" aria-controls="clickfix-content" id="clickfix-btn">
-        Leggi l'articolo completo
-      </button>
-      <div id="clickfix-content" class="accordion-content" hidden tabindex="0">
-        <article class="article-container" tabindex="-1">
-          <h1>ClickFix: Quando il copia e incolla diventa un’arma</h1>
-
-          <p>ClickFix è una tattica di Social Engineering che ha preso piede nel corso del
-          2024 e consiste nell’indurre le vittime ad incollare ed eseguire comandi
-          malevoli su dispositivi desktop Windows, tipicamente utilizzando scorciatoie
-          con cui l’utente meno esperto potrebbe avere poca dimestichezza.</p>
-
-          <p>Una campagna ClickFix inizia attirando la vittima su una pagina controllata
-          dall’attore malevolo o inducendola ad aprire un documento inviato in allegato
-          che conterranno il pretesto per spingere la vittima ad eseguire i comandi.
-          Gli attaccanti utilizzano due principali pretesti:</p>
-
-          <ul>
-            <li><strong>finti CAPTCHA:</strong> l’utente sarà portato naturalmente a cliccare sul
-            CAPTCHA che copierà a sua insaputa un codice malevolo negli
-            appunti. Successivamente gli verranno mostrate delle finte istruzioni per
-            risolverlo, inducendolo ad incollare il codice nascosto ed eseguirlo
-            premendo invio.</li>
-
-            <li><strong>finti messaggi di errore:</strong> le pagine o documenti conterranno finti file
-            Office, finti link a riunioni dalle principali piattaforme (Meet, Zoom,
-            Teams) e siti noti con presunti errori ed un pulsante da cliccare per
-            risolverli. In maniera simile a quanto avviene per il finto CAPTCHA, al
-            click viene copiato un codice ad insaputa della vittima e
-            contestualmente vengono mostrate delle istruzioni da seguire. Alcune
-            varianti della campagna non contengono il bottone da cliccare ma
-            mostrano direttamente il codice da copiare con le relative istruzioni.</li>
-          </ul>
-
-          <img src="img.png" alt="Esempio codice da copiare e incollare" class="responsive-img" />
-
-          <p>Le campagne fino ad ora osservate utilizzavano tre diverse locazioni in cui
-          incollare ed eseguire il codice:</p>
-
-          <ol>
-            <li>finestra Esegui di Windows lanciata mediante la scorciatoia WIN+R</li>
-            <li>barra degli indirizzi di Esplora Risorse, aperto tramite la scorciatoia WIN+E</li>
-            <li>Finestre di terminale, sia CMD che PowerShell</li>
-          </ol>
-
-          <p>Per difendersi da queste campagne è bene seguire le seguenti regole:</p>
-
-          <ul>
-            <li>Non incollare mai codice copiato da fonti non verificate o non ufficiali</li>
-            <li>Non aprire mai allegati o link sospetti, specialmente se richiesti improvvisamente</li>
-            <li>Formare il personale aziendale per riconoscere queste tattiche</li>
-            <li>Utilizzare strumenti di sicurezza che monitorano attività sospette</li>
-          </ul>
-        </article>
+    <section id="projects" class="section">
+      <h2>I miei progetti</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Progetto 1</h3>
+          <p>Descrizione del progetto 1. Un breve riassunto delle funzionalità e delle tecnologie usate.</p>
+          <button class="accordion-btn" aria-expanded="false" aria-controls="proj1">Dettagli</button>
+          <div class="accordion-content" id="proj1" hidden>
+            <p>Ulteriori dettagli sul progetto 1. Tecnologie: HTML, CSS, JavaScript.</p>
+            <img src="project1.jpg" alt="Screenshot del progetto 1">
+          </div>
+        </div>
+        <div class="card">
+          <h3>Progetto 2</h3>
+          <p>Descrizione del progetto 2. Un breve riassunto delle funzionalità e delle tecnologie usate.</p>
+          <button class="accordion-btn" aria-expanded="false" aria-controls="proj2">Dettagli</button>
+          <div class="accordion-content" id="proj2" hidden>
+            <p>Ulteriori dettagli sul progetto 2. Tecnologie: React, Node.js.</p>
+            <img src="project2.jpg" alt="Screenshot del progetto 2">
+          </div>
+        </div>
+        <!-- Aggiungi più progetti se necessario -->
       </div>
-    </article>
-  </div>
-</section>
+    </section>
 
+    <section id="contact" class="section">
+      <h2>Contattami</h2>
+      <form class="contact-form">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required />
 
-  <section id="mappa" class="section" aria-labelledby="mappa-title">
-    <h2 id="mappa-title">Dove siamo</h2>
-    <div style="width: 100%; height: 400px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086540060784!2d12.492230615316848!3d41.89021037922153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61a1c2a30bd7%3A0x7c0d6cde2af94ee0!2sColosseo!5e0!3m2!1sit!2sit!4v1623957489762!5m2!1sit!2sit"
-        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        title="Mappa Google della nostra sede"></iframe>
-    </div>
-  </section>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
 
-  <section id="contatti" class="section" aria-labelledby="contatti-title">
-    <h2 id="contatti-title">Contatti</h2>
+        <label for="message">Messaggio</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-    <form class="contact-form" action="#" method="post" aria-label="Modulo di contatto">
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" required />
+        <button type="submit" class="btn">Invia</button>
+      </form>
+    </section>
+  </main>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+  <footer>
+    <p>&copy; 2025 Il tuo nome. Tutti i diritti riservati.</p>
+  </footer>
 
-      <label for="messaggio">Messaggio</label>
-      <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+  <script>
+    // Script per accordion
+    const buttons = document.querySelectorAll(".accordion-btn");
 
-      <button type="submit" class="btn">Invia</button>
-    </form>
-  </section>
-
-</main>
-
-<footer role="contentinfo">
-  <p>&copy; 2025 Protezione Social Engineering. Tutti i diritti riservati.</p>
-</footer>
-
-<script>
-  // Accordion toggle for notizie section
-document.querySelectorAll('.accordion-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const expanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', String(!expanded));
-    const content = document.getElementById(button.getAttribute('aria-controls'));
-    if (content) {
-      if (expanded) {
-        content.hidden = true;
-        content.setAttribute('tabindex', '-1');
-        button.textContent = "Leggi l'articolo completo";
-      } else {
-        content.hidden = false;
-        content.setAttribute('tabindex', '0');
-        content.focus();
-        button.textContent = "Chiudi articolo";
-      }
-    }
-  });
-});
-
-</script>
-
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const content = document.getElementById(btn.getAttribute("aria-controls"));
+        const isExpanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", !isExpanded);
+        content.hidden = isExpanded;
+      });
+    });
+  </script>
 </body>
 </html>
