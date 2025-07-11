@@ -1,88 +1,205 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+/* Base Reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #0a0a0a; /* nero molto scuro */
+  color: #eee; /* bianco/grigio chiaro per testo */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  <nav>
-    <a href="#about">Chi sono</a>
-    <a href="#projects">Progetti</a>
-    <a href="#contact">Contatti</a>
-  </nav>
+/* NAVBAR */
+nav {
+  background-color: #121212; /* nero scuro */
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #d32f2f; /* rosso “pericolo” */
+}
+nav a {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+nav a:hover,
+nav a:focus {
+  color: #fff;
+  text-decoration: underline;
+  outline: none;
+}
 
-  <header class="hero">
-    <h1>Benvenuto nel mio Portfolio</h1>
-    <p>Scopri i miei progetti e le mie esperienze nel mondo dello sviluppo web.</p>
-  </header>
+/* HERO */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #d32f2f;
+  text-shadow: 0 0 10px rgba(211, 47, 47, 0.8);
+}
+.hero p {
+  font-size: 1.4rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #ccc;
+}
 
-  <main>
-    <section id="about" class="section">
-      <h2>Chi sono</h2>
-      <p>Sono uno sviluppatore web appassionato di tecnologia e design. Amo trasformare idee in realtà digitali.</p>
-    </section>
+/* MAIN */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 90%;
+}
 
-    <section id="projects" class="section">
-      <h2>I miei progetti</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Progetto 1</h3>
-          <p>Descrizione del progetto 1. Un breve riassunto delle funzionalità e delle tecnologie usate.</p>
-          <button class="accordion-btn" aria-expanded="false" aria-controls="proj1">Dettagli</button>
-          <div class="accordion-content" id="proj1" hidden>
-            <p>Ulteriori dettagli sul progetto 1. Tecnologie: HTML, CSS, JavaScript.</p>
-            <img src="project1.jpg" alt="Screenshot del progetto 1">
-          </div>
-        </div>
-        <div class="card">
-          <h3>Progetto 2</h3>
-          <p>Descrizione del progetto 2. Un breve riassunto delle funzionalità e delle tecnologie usate.</p>
-          <button class="accordion-btn" aria-expanded="false" aria-controls="proj2">Dettagli</button>
-          <div class="accordion-content" id="proj2" hidden>
-            <p>Ulteriori dettagli sul progetto 2. Tecnologie: React, Node.js.</p>
-            <img src="project2.jpg" alt="Screenshot del progetto 2">
-          </div>
-        </div>
-        <!-- Aggiungi più progetti se necessario -->
-      </div>
-    </section>
+/* Sections */
+.section {
+  margin-bottom: 3rem;
+}
 
-    <section id="contact" class="section">
-      <h2>Contattami</h2>
-      <form class="contact-form">
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name" required />
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background-color: #1c1c1c; /* nero scuro ma più chiaro */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+  transition: background-color 0.3s ease;
+}
+.card:focus,
+.card:hover {
+  background-color: #2a2a2a;
+  outline: none;
+}
+.card h3 {
+  margin-top: 0;
+  color: #eee;
+}
+.card p {
+  margin-bottom: 1rem;
+  color: #bbb;
+}
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+/* Accordion button */
+.accordion-btn {
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+.accordion-btn:hover,
+.accordion-btn:focus {
+  background-color: #a52828; /* rosso scuro */
+  outline: none;
+}
 
-        <label for="message">Messaggio</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+/* Accordion content */
+.accordion-content {
+  margin-top: 1rem;
+  background-color: #121212;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  color: #ddd;
+  line-height: 1.5;
+  box-shadow: inset 0 0 5px rgba(211, 47, 47, 0.5);
+}
+.accordion-content img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
 
-        <button type="submit" class="btn">Invia</button>
-      </form>
-    </section>
-  </main>
+/* Contact form */
+.contact-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #d32f2f;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  background-color: #222;
+  color: #eee;
+}
+.contact-form button.btn {
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form button.btn:hover,
+.contact-form button.btn:focus {
+  background-color: #a52828;
+  outline: none;
+}
 
-  <footer>
-    <p>&copy; 2025 Il tuo nome. Tutti i diritti riservati.</p>
-  </footer>
+/* Footer */
+footer {
+  background-color: #121212;
+  color: #bbb;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  border-top: 2px solid #d32f2f;
+}
 
-  <script>
-    // Script per accordion
-    const buttons = document.querySelectorAll(".accordion-btn");
+/* Accessibility focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #d32f2f;
+  outline-offset: 3px;
+}
 
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const content = document.getElementById(btn.getAttribute("aria-controls"));
-        const isExpanded = btn.getAttribute("aria-expanded") === "true";
-        btn.setAttribute("aria-expanded", !isExpanded);
-        content.hidden = isExpanded;
-      });
-    });
-  </script>
-</body>
-</html>
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  main {
+    width: 95%;
+    padding: 1rem;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
