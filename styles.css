@@ -6,8 +6,8 @@ body {
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.6;
-  background-color: #000; /* nero pieno */
-  color: #fff; /* bianco testo */
+  background-color: #0a0a0a; /* nero molto scuro */
+  color: #eee; /* bianco/grigio chiaro per testo */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ body {
 
 /* NAVBAR */
 nav {
-  background-color: #111; /* nero scuro */
+  background-color: #121212; /* nero scuro */
   padding: 1.2rem 2rem;
   display: flex;
   justify-content: center;
@@ -23,10 +23,10 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 2px solid #ff0000; /* rosso puro */
+  border-bottom: 2px solid #d32f2f; /* rosso “pericolo” */
 }
 nav a {
-  color: #ff0000; /* rosso puro */
+  color: #d32f2f;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -34,7 +34,7 @@ nav a {
 }
 nav a:hover,
 nav a:focus {
-  color: #fff; /* bianco */
+  color: #fff;
   text-decoration: underline;
   outline: none;
 }
@@ -47,14 +47,14 @@ nav a:focus {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #ff0000; /* rosso puro */
-  text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+  color: #d32f2f;
+  text-shadow: 0 0 10px rgba(211, 47, 47, 0.8);
 }
 .hero p {
   font-size: 1.4rem;
   max-width: 600px;
   margin: 0 auto;
-  color: #ccc; /* bianco spento */
+  color: #ccc;
 }
 
 /* MAIN */
@@ -78,29 +78,29 @@ main {
   gap: 1.5rem;
 }
 .card {
-  background-color: #111; /* nero scuro */
+  background-color: #1c1c1c; /* nero scuro ma più chiaro */
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
   transition: background-color 0.3s ease;
 }
 .card:focus,
 .card:hover {
-  background-color: #222; /* nero medio */
+  background-color: #2a2a2a;
   outline: none;
 }
 .card h3 {
   margin-top: 0;
-  color: #fff;
+  color: #eee;
 }
 .card p {
   margin-bottom: 1rem;
-  color: #ccc;
+  color: #bbb;
 }
 
 /* Accordion button */
 .accordion-btn {
-  background-color: #ff0000; /* rosso puro */
+  background-color: #d32f2f;
   color: #fff;
   border: none;
   padding: 0.6rem 1rem;
@@ -113,25 +113,25 @@ main {
 }
 .accordion-btn:hover,
 .accordion-btn:focus {
-  background-color: #cc0000; /* rosso scuro */
+  background-color: #a52828; /* rosso scuro */
   outline: none;
 }
 
 /* Accordion content */
 .accordion-content {
   margin-top: 1rem;
-  background-color: #111; /* nero scuro */
+  background-color: #121212;
   padding: 1rem 1.5rem;
   border-radius: 12px;
-  color: #eee; /* quasi bianco */
+  color: #ddd;
   line-height: 1.5;
-  box-shadow: inset 0 0 5px rgba(255, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(211, 47, 47, 0.5);
 }
 .accordion-content img {
   max-width: 100%;
   border-radius: 12px;
   margin: 1rem 0;
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
 }
 
 /* Contact form */
@@ -139,7 +139,7 @@ main {
   display: block;
   margin-bottom: 0.3rem;
   font-weight: 600;
-  color: #ff0000; /* rosso puro */
+  color: #d32f2f;
 }
 .contact-form input,
 .contact-form textarea {
@@ -149,11 +149,11 @@ main {
   border-radius: 6px;
   border: none;
   font-size: 1rem;
-  background-color: #222; /* nero medio */
-  color: #fff;
+  background-color: #222;
+  color: #eee;
 }
 .contact-form button.btn {
-  background-color: #ff0000; /* rosso puro */
+  background-color: #d32f2f;
   color: #fff;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -164,18 +164,18 @@ main {
 }
 .contact-form button.btn:hover,
 .contact-form button.btn:focus {
-  background-color: #cc0000; /* rosso scuro */
+  background-color: #a52828;
   outline: none;
 }
 
 /* Footer */
 footer {
-  background-color: #111; /* nero scuro */
-  color: #ccc;
+  background-color: #121212;
+  color: #bbb;
   text-align: center;
   padding: 1rem 2rem;
   font-size: 0.9rem;
-  border-top: 2px solid #ff0000; /* rosso puro */
+  border-top: 2px solid #d32f2f;
 }
 
 /* Accessibility focus */
@@ -183,7 +183,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #ff0000;
+  outline: 3px solid #d32f2f;
   outline-offset: 3px;
 }
 
