@@ -232,16 +232,17 @@ footer {
   line-height: 1.7;
 }
 
-  .box-section {
-  border: 3px solid #00BFFF; /* blu PYNLab, come header e chi siamo */
-  background-color: transparent; /* un blu molto scuro trasparente per armonizzarsi con sfondi */
+.box-section {
+  border: 3px solid #00BFFF; /* bordo celeste */
+  background-color: transparent; /* niente sfondo, lascia il nero di base */
   padding: 30px 40px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 191, 255, 0.4); /* ombra azzurra delicata */
   margin-bottom: 40px;
-  color: #d0e9ff; /* colore testo coerente con il resto */
+  color: #d0e9ff; /* testo azzurro chiaro */
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
+
 
