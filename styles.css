@@ -179,6 +179,35 @@ footer {
      3px 3px 0 black;
   font-size: 1.8rem;
   text-align: center;
+
+  /* Chi Siamo Section */
+.chi-siamo {
+  background-color: #111111;
+  padding: 60px 20px;
+  color: #ffffff;
+  text-align: center;
+  border-top: 2px solid #00BFFF;
+  border-bottom: 2px solid #00BFFF;
+}
+
+.chi-siamo .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.chi-siamo h2 {
+  font-size: 36px;
+  color: #00BFFF;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.chi-siamo p {
+  font-size: 18px;
+  color: #d0e9ff;
+  line-height: 1.6;
+}
+
   margin: 0;
   font-style: italic;
 }
