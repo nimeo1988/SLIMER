@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contatti | SERse - PYNLab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  
+   <header>
+    <div class="logo">
+      <img src="logo.png" alt="SERse Logo">
+    </div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./servizi.html">Servizi</a>
+      <a href="./notizie.html">Notizie</a>
+      <a href="./contatti.html">Contatti</a>
+    </nav>
+  </header>
+
+
+  <section class="intro">
+    <div class="logo-bg"></div>
+    <div class="intro-text">
+      <h1>Contatti</h1>
+      <p>Hai bisogno di maggiori informazioni sui nostri servizi, vuoi una demo o una consulenza gratuita? Contattaci.</p>
+    </div>
+  </section>
+
+  <section class="services-section" id="contatti">
+    <h2>Contatta il team SERse</h2>
+    <div class="services-container">
+
+      <div class="service-box">
+        <h3>Informazioni</h3>
+        <p>Email: <a href="mailto:info@pynlab.it">info@pynlab.it</a></p>
+        <p>Telefono: <a href="tel:+390112233445">+39 011 2233445</a></p>
+        <p>Indirizzo: Via della Sicurezza, 42 – 10100 Torino (TO)</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Scrivici</h3>
+        <form action="mailto:info@pynlab.it" method="POST" enctype="text/plain">
+          <label for="nome">Nome:</label><br />
+          <input type="text" id="nome" name="nome" required><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required><br /><br />
+
+          <label for="messaggio">Messaggio:</label><br />
+          <textarea id="messaggio" name="messaggio" rows="5" required></textarea><br /><br />
+
+          <button type="submit">Invia</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 PYNLab | info@pynlab.it | Tutti i diritti riservati
+  </footer>
+
+</body>
+</html>

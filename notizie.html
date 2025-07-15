@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notizie | SERse - PYNLab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="SERse Logo">
+    </div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./servizi.html">Servizi</a>
+      <a href="./notizie.html" class="active">Notizie</a>
+      <a href="./contatti.html">Contatti</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <div class="logo-bg"></div>
+    <div class="intro-text">
+      <h1>Notizie</h1>
+      <p>Rimani aggiornato sulle ultime novità, ricerche e aggiornamenti dal mondo della sicurezza e del social engineering.</p>
+    </div>
+  </section>
+
+  <section class="services-section" id="notizie">
+    <h2>Ultime notizie</h2>
+    <div class="services-container" id="news-list">
+      Caricamento notizie...
+    </div>
+  </section>
+
+  <script>
+    fetch('notizie/index.json')
+      .then(response => response.json())
+      .then(noticelist => {
+        const container = document.getElementById('news-list');
+        container.innerHTML = '';
+
+        noticelist.forEach(news => {
+          const box = document.createElement('div');
+          box.classList.add('service-box');
+
+          const title = document.createElement('h3');
+          const link = document.createElement('a');
+          link.href = 'notizie/' + news.link;
+          link.textContent = news.titolo;
+          link.style.textDecoration = 'none';
+          link.style.color = 'inherit';
+          title.appendChild(link);
+
+          const paragraph = document.createElement('p');
+          paragraph.textContent = news.abstract;
+
+          box.appendChild(title);
+          box.appendChild(paragraph);
+          container.appendChild(box);
+        });
+      })
+      .catch(error => {
+        document.getElementById('news-list').innerText = 'Errore nel caricamento delle notizie.';
+        console.error(error);
+      });
+  </script>
+
+  <footer id="contatti">
+    &copy; 2025 PYNLab | info@pynlab.it | Tutti i diritti riservati
+  </footer>
+
+</body>
+</html>
