@@ -6,37 +6,37 @@
   },
   {
     "titolo": "Nuove tecniche di social engineering emerse nel 2025",
-    "abstract": "Analisi delle piÃ¹ recenti strategie di attacco e contromisure aggiornate.",
+    "abstract": "Analisi delle più recenti strategie di attacco e contromisure aggiornate.",
     "link": "notizia3.html"
   },
   {
-    "titolo": " di phishing: l'efficacia nei test reali",
-    "abstract": "sguardo ai dati raccolti durante simulazioni aziendali e alla risposta degli utenti.",
+    "titolo": "Simulazioni di phishing: l'efficacia nei test reali",
+    "abstract": "Uno sguardo ai dati raccolti durante simulazioni aziendali e alla risposta degli utenti.",
     "link": "notizia4.html"
   },
   {
-    "titolo": " ruolo dell'errore umano nella sicurezza informatica",
-    "abstract": " prevenire le minacce agendo sulla consapevolezza e sul comportamento degli utenti.",
+    "titolo": "Il ruolo dell'errore umano nella sicurezza informatica (variante)",
+    "abstract": "Strategie per prevenire le minacce focalizzandosi sulla consapevolezza individuale degli utenti.",
     "link": "notizia5.html"
   },
   {
-    "titolo": " tecniche di social engineering emerse nel 2025",
-    "abstract": " delle piÃ¹ recenti strategie di attacco e contromisure aggiornate.",
+    "titolo": "Nuove tecniche di social engineering emerse nel 2025 (approfondimento)",
+    "abstract": "Una panoramica delle più recenti tecniche ingannevoli e delle migliori difese possibili.",
     "link": "notizia6.html"
-  }, 
+  },
   {
-    "titolo": " phishing: l'efficacia nei test reali",
-    "abstract": "  ai dati raccolti durante simulazioni aziendali e alla risposta degli utenti.",
+    "titolo": "Phishing: l'efficacia nei test reali (approfondimento)",
+    "abstract": "Analisi dei risultati ottenuti da campagne simulate e misure correttive adottate.",
     "link": "notizia7.html"
   },
   {
-    "titolo": "  dell'errore umano nella sicurezza informatica",
-    "abstract": "  le minacce agendo sulla consapevolezza e sul comportamento degli utenti.",
+    "titolo": "Errore umano e sicurezza informatica: un legame critico",
+    "abstract": "L'importanza della formazione continua e delle policy aziendali per ridurre i rischi.",
     "link": "notizia8.html"
   },
   {
-    "titolo": " di social engineering emerse nel 2025",
-    "abstract": "  piÃ¹ recenti strategie di attacco e contromisure aggiornate.",
-    "link": "notizia8.html"
+    "titolo": "Tecniche di social engineering nel 2025: scenari futuri",
+    "abstract": "Previsioni sull'evoluzione delle strategie di attacco psicologico nei prossimi anni.",
+    "link": "notizia9.html"
   }
 ]
