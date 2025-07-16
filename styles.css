@@ -158,12 +158,11 @@ nav a:hover, nav a.active {
 }
 
 .about-image {
-  position: relative; /* per posizionare testo sopra */
+  position: relative;
   flex: 1 1 400px;
   height: 280px;
   background: url('slogan.png') center center/cover no-repeat;
   border-radius: 12px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,7 +171,7 @@ nav a:hover, nav a.active {
 }
 
 .slogan-text {
-  background-color: rgba(0, 0, 0, 0.6); /* sfondo nero trasparente */
+  background-color: rgba(0, 0, 0, 0.6);
   color: #0099ff;
   font-size: 1.5rem;
   font-weight: 700;
@@ -367,39 +366,39 @@ footer {
 }
 
 /* --- Responsive --- */
-/*
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
   }
+  
   .header-container {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
+  
   nav {
     gap: 1rem;
   }
-
-  --- Notizie page intro e titoli ---
+  
   .intro-text {
     max-width: 700px;
-    margin: 2rem auto 3rem auto; --- spazio sopra e sotto ---
+    margin: 2rem auto 3rem auto;
     text-align: center;
     color: #b8b8b8;
   }
-
+  
   .intro-text h1 {
     font-size: 3rem;
     color: #0066cc;
     margin-bottom: 1rem;
   }
-
+  
   .intro-text p {
     font-size: 1.2rem;
     line-height: 1.6;
   }
-
+  
   .section-subtitle {
     color: #0099ff;
     font-weight: 600;
@@ -407,17 +406,15 @@ footer {
     margin-bottom: 2rem;
     text-align: center;
   }
-
-  --- Se vuoi un container più ordinato per le news ---
+  
   #news-list {
     max-width: 900px;
     margin: 0 auto;
   }
-
+  
   .about-image {
-    height: auto; --- Lascia che l'altezza si adatti ---
-    min-height: 200px; --- un minimo per mantenere buona visibilità ---
-    background-position: top center; --- sposta il focus in alto ---
+    height: auto;
+    min-height: 200px;
+    background-position: top center;
   }
 }
-*/
