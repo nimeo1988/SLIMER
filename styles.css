@@ -411,5 +411,23 @@ footer {
   max-width: 900px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  nav a {
+    padding: 1rem;
+    background-color: rgba(0, 102, 204, 0.1);
+    border-radius: 8px;
+    display: block;
+  }
+
+  nav a:hover, nav a.active {
+    background-color: rgba(0, 102, 204, 0.3);
+  }
+}
 
 }
