@@ -169,7 +169,16 @@
       padding: 1rem;
     }
 
-    /* Ho rimosso .slogan-text */
+    .slogan-text {
+      position: absolute;
+      color: #0099ff;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: italic;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      max-width: 80%;
+      user-select: none;
+    }
 
     /* --- Services --- */
     .services {
@@ -226,7 +235,19 @@
       border-bottom: 1px solid #333;
     }
 
-    /* Ho rimosso tutto il contenuto quote */
+    /* La frase è stata rimossa da qui */
+    /* .quote-content h2 {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #0099ff;
+    }
+
+    .quote-author {
+      font-size: 1.1rem;
+      color: #555;
+    } */
 
     /* --- Footer --- */
     footer {
@@ -399,7 +420,9 @@
           <p>Utilizziamo metodologie avanzate per costruire percorsi formativi che rafforzano la resilienza psicologica e comportamentale dei team aziendali, trasformando il fattore umano da potenziale vulnerabilità in primo baluardo di sicurezza.</p>
         </div>
         <div class="about-image">
-          <!-- Rimosso il div con slogan-text -->
+          <div class="slogan-text">
+            "Fasten your belt, don't draw it on your t-shirt"
+          </div>
         </div> <!-- slogan.png come background -->
       </div>
     </div>
@@ -418,51 +441,35 @@
           <p>Indice proprietario per valutare il rischio legato agli attacchi di ingegneria sociale nella tua organizzazione, con metriche precise e actionable.</p>
         </div>
         <div class="service-card">
-          <h3>TEI Program</h3>
-          <p>TEST, EVALUATE, IMPROVE. Programma di valutazione continua e miglioramento della postura di sicurezza umana con metodologie scientifiche.</p>
+          <h3>Formazione e Awareness</h3>
+          <p>Corsi personalizzati per educare i dipendenti a riconoscere e prevenire attacchi di social engineering, con simulazioni realistiche.</p>
         </div>
         <div class="service-card">
-          <h3>Attacchi Simulati</h3>
-          <p>Campagne realistiche di phishing, USB drop, QR code, BEC e vishing, costantemente aggiornate alle ultime tecniche di attacco.</p>
-        </div>
-        <div class="service-card">
-          <h3>Formazione Comportamentale</h3>
-          <p>Training specializzato per indirizzare le decisioni degli utenti verso comportamenti sicuri in scenari di attacco reali.</p>
+          <h3>Simulazioni di Attacco</h3>
+          <p>Test mirati per valutare la reattività e la preparazione del team, identificando punti deboli e aree di miglioramento.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section" id="contatti">
+  <!-- Quote Section (frase rimossa) -->
+  <section class="quote" aria-label="Citazione">
     <div class="container">
-      <h2>Contattaci</h2>
-      <form class="contact-form" action="#" method="post">
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name" placeholder="Il tuo nome" required />
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="La tua email" required />
-        
-        <label for="message">Messaggio</label>
-        <textarea id="message" name="message" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
-        
-        <button type="submit">Invia</button>
-      </form>
+      <!-- La frase è stata rimossa come richiesto -->
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-content">
+    <div class="footer-content container">
       <div class="footer-section">
         <h3>Contatti</h3>
-        <p>Email: info@serse.it</p>
-        <p>Telefono: +39 012 345 6789</p>
+        <p>Email: info@pynlab.com</p>
+        <p>Telefono: +39 123 456 7890</p>
       </div>
       <div class="footer-section">
         <h3>Indirizzo</h3>
-        <p>Via della Sicurezza 42, 00100 Roma, Italia</p>
+        <p>Via Roma 123, 00100 Roma, Italia</p>
       </div>
       <div class="footer-section">
         <h3>Seguici</h3>
@@ -470,8 +477,9 @@
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2025 SERse | Social Engineering Research - PYNLab
+      &copy; 2025 PYNLab. Tutti i diritti riservati.
     </div>
   </footer>
+
 </body>
 </html>
