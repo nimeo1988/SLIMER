@@ -1,17 +1,42 @@
 [
   {
-    "titolo": "Simulazioni di phishing: l'efficacia nei test reali",
-    "abstract": "Uno sguardo ai dati raccolti durante simulazioni aziendali e alla risposta degli utenti.",
-    "link": "notizia1.html"
-  },
-  {
     "titolo": "Il ruolo dell'errore umano nella sicurezza informatica",
     "abstract": "Come prevenire le minacce agendo sulla consapevolezza e sul comportamento degli utenti.",
     "link": "notizia2.html"
   },
   {
     "titolo": "Nuove tecniche di social engineering emerse nel 2025",
-    "abstract": "Analisi delle pi� recenti strategie di attacco e contromisure aggiornate.",
+    "abstract": "Analisi delle piÃ¹ recenti strategie di attacco e contromisure aggiornate.",
     "link": "notizia3.html"
+  },
+  {
+    "titolo": " di phishing: l'efficacia nei test reali",
+    "abstract": "sguardo ai dati raccolti durante simulazioni aziendali e alla risposta degli utenti.",
+    "link": "notizia4.html"
+  },
+  {
+    "titolo": " ruolo dell'errore umano nella sicurezza informatica",
+    "abstract": " prevenire le minacce agendo sulla consapevolezza e sul comportamento degli utenti.",
+    "link": "notizia5.html"
+  },
+  {
+    "titolo": " tecniche di social engineering emerse nel 2025",
+    "abstract": " delle piÃ¹ recenti strategie di attacco e contromisure aggiornate.",
+    "link": "notizia6.html"
+  }, 
+  {
+    "titolo": " phishing: l'efficacia nei test reali",
+    "abstract": "  ai dati raccolti durante simulazioni aziendali e alla risposta degli utenti.",
+    "link": "notizia7.html"
+  },
+  {
+    "titolo": "  dell'errore umano nella sicurezza informatica",
+    "abstract": "  le minacce agendo sulla consapevolezza e sul comportamento degli utenti.",
+    "link": "notizia8.html"
+  },
+  {
+    "titolo": " di social engineering emerse nel 2025",
+    "abstract": "  piÃ¹ recenti strategie di attacco e contromisure aggiornate.",
+    "link": "notizia8.html"
   }
 ]
