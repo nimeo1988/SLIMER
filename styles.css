@@ -430,4 +430,21 @@ footer {
     max-width: 90%;
     padding: 0 0.5rem;
   }
+  @media (max-width: 768px) {
+  .about-image {
+    flex: 1 1 100%;
+    height: auto; /* lascia che l’altezza si adatti */
+    min-height: 200px; /* per non sparire */
+    background-size: contain; /* meglio che cover per piccoli schermi */
+    background-position: center center;
+  }
+
+  .slogan-text {
+    position: relative; /* meglio non assoluto su mobile */
+    font-size: 1.2rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
 }
