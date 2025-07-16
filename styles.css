@@ -250,6 +250,12 @@ footer {
   margin-right: auto;
 }
 
+/* Animazione fade-in per contatti */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
 .contact-flex {
   display: flex;
   flex-wrap: wrap;
@@ -261,34 +267,42 @@ footer {
 .contact-info,
 .contact-form {
   flex: 1 1 320px;
-  padding: 25px;
-  border-radius: 6px;
-  /* Eliminato bordo sinistro rosso */
-  /* border-left: 6px solid #e74c3c; */
-  /* Eliminata ombra azzurra */
-  /* box-shadow: 0 0 15px rgba(0, 191, 255, 0.4); */
+  padding: 30px 35px; /* più padding per ariosità */
+  border-radius: 8px;
   background-color: #1a1a1a; /* uguale ai box servizi */
   color: #d0e9ff; /* azzurro chiaro per il testo */
   text-align: left;
+  animation: fadeIn 1s ease forwards;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3); /* ombra azzurra delicata */
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-info:hover,
+.contact-form:hover {
+  box-shadow: 0 0 30px rgba(231, 76, 60, 0.8); /* ombra rossa al passaggio */
 }
 
 .contact-info h3,
 .contact-form h3 {
   color: #00BFFF;
-  margin-bottom: 15px;
-  font-size: 22px;
+  margin-bottom: 20px;
+  font-size: 24px; /* leggermente più grande */
+  font-weight: 700;
+  border-bottom: 2px solid #00BFFF;
+  padding-bottom: 8px;
 }
 
 .contact-info p {
-  font-size: 16px;
-  margin-bottom: 12px;
-  line-height: 1.4;
+  font-size: 17px;
+  margin-bottom: 14px;
+  line-height: 1.5;
 }
 
 .contact-info a {
   color: #00BFFF;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
@@ -302,17 +316,17 @@ footer {
 
 .contact-form label {
   font-weight: bold;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
   color: #d0e9ff;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem;
+  padding: 1rem;
   border: 1px solid #444;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
   background-color: #000000;
   color: #d0e9ff;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -327,19 +341,19 @@ footer {
 .contact-form textarea:focus {
   outline: none;
   border-color: #00BFFF;
-  box-shadow: 0 0 8px #00BFFF;
+  box-shadow: 0 0 10px #00BFFF;
   background-color: #0a0a0a;
 }
 
 .btn {
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
+  padding: 0.85rem 1.8rem;
   background-color: #00BFFF;
   color: #000000;
   border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
