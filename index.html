@@ -6,6 +6,377 @@
   <title>SERse | Social Engineering Research - PYNLab</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Inserisco direttamente il CSS base e modifiche per about-image e slogan-text */
+    /* --- Reset e base --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Header --- */
+    header {
+      background-color: #0a0a0a;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #333;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 24px;
+      user-select: none;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #0066cc;
+      background-color: rgba(0, 102, 204, 0.1);
+    }
+
+    /* --- Hero --- */
+    .hero {
+      background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+      padding: 8rem 2rem 6rem;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fff, #0066cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 1.25rem;
+      color: #b8b8b8;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #0066cc, #004499);
+      color: white;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .cta-button svg {
+      stroke: white;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(135deg, #004499, #002266);
+    }
+
+    .cta-button:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* --- About --- */
+    .about {
+      background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+      padding: 4rem 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-content {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+      color: #b8b8b8;
+    }
+
+    .about-text h2 {
+      color: #0066cc;
+      margin-bottom: 1rem;
+    }
+
+    .about-image {
+      position: relative;
+      flex: 1 1 400px;
+      height: 280px;
+      background: url('slogan.png') center center/cover no-repeat;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .slogan-text {
+      position: absolute;
+      color: #0099ff;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: italic;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      max-width: 80%;
+      user-select: none;
+    }
+
+    /* --- Services --- */
+    .services {
+      background-color: #1a1a1a;
+      padding: 4rem 2rem;
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .section-header h2 {
+      color: #0066cc;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+      color: #b8b8b8;
+      font-size: 1.1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background-color: #0a0a0a;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid #333;
+      box-shadow: 0 4px 8px rgba(0, 102, 204, 0.1);
+      color: #b8b8b8;
+    }
+
+    .service-card h3 {
+      color: #0066cc;
+      margin-bottom: 1rem;
+    }
+
+    /* --- Quote --- */
+    .quote {
+      background-color: #0a0a0a;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+
+    .quote-content h2 {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #0099ff;
+    }
+
+    .quote-author {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #121212;
+      padding: 2rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      display: flex;
+      gap: 4rem;
+      max-width: 1200px;
+      margin: 0 auto 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+    }
+
+    .footer-section h3 {
+      color: #0066cc;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p, .footer-section a {
+      color: #888;
+      line-height: 1.5;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #333;
+      padding-top: 1rem;
+      color: #555;
+    }
+
+    /* --- Contact form --- */
+    .contact-section {
+      background: #1a1a1a;
+      padding: 4rem 2rem;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.3rem;
+      color: #b8b8b8;
+      font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      font-family: inherit;
+      background-color: #0a0a0a;
+      color: #eee;
+      border: 1px solid #333;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #0066cc;
+    }
+
+    .contact-form button {
+      background: #0066cc;
+      border: none;
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #004499;
+    }
+
+    /* --- Notizie page boxes --- */
+    .service-box {
+      background-color: #0a0a0a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 3px 6px rgba(0, 102, 204, 0.1);
+    }
+
+    .service-box h3 {
+      color: #0066cc;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-box p {
+      color: #b8b8b8;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+      }
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      nav {
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -89,79 +460,48 @@
     <div class="container">
       <div class="quote-content">
         <h2>"Fasten your belt, don't draw it on your t-shirt"</h2>
-        <p class="quote-author">— Filosofia SERse</p>
+        <p class="quote-author">- PYNLab</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer id="contatti">
+  <!-- Contact Section -->
+  <section class="contact-section" id="contatti">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Contatti</h3>
-          <p><strong>Email:</strong> <a href="mailto:info@pynlab.it">info@pynlab.it</a></p>
-          <p><strong>Telefono:</strong> <a href="tel:+390112233445">+39 011 2233445</a></p>
-          <p><strong>Indirizzo:</strong><br>Via della Sicurezza, 42<br>10100 Torino (TO)</p>
-        </div>
-        <div class="footer-section">
-          <h3>Servizi</h3>
-          <p>Social Engineering Risk Rating</p>
-          <p>TEI Program</p>
-          <p>Attacchi Simulati</p>
-          <p>Formazione Comportamentale</p>
-        </div>
-        <div class="footer-section">
-          <h3>Azienda</h3>
-          <p>Chi Siamo</p>
-          <p>La nostra Mission</p>
-          <p>Metodologie</p>
-          <p>Privacy Policy</p>
-        </div>
+      <h2>Contattaci</h2>
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Il tuo nome" required />
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="La tua email" required />
+        
+        <label for="message">Messaggio</label>
+        <textarea id="message" name="message" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
+        
+        <button type="submit">Invia</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>Contatti</h3>
+        <p>Indirizzo: Via Esempio 123, Milano</p>
+        <p>Email: info@serse.it</p>
+        <p>Telefono: +39 02 12345678</p>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 PYNLab | Tutti i diritti riservati</p>
+      <div class="footer-section">
+        <h3>Seguici</h3>
+        <p><a href="#">LinkedIn</a></p>
+        <p><a href="#">Twitter</a></p>
       </div>
     </div>
+    <div class="footer-bottom">
+      © 2025 SERse | PYNLab. Tutti i diritti riservati.
+    </div>
   </footer>
-
-  <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Active navigation highlight
-    window.addEventListener('scroll', function() {
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('nav a');
-      
-      let current = '';
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-          current = section.getAttribute('id');
-        }
-      });
-      
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
