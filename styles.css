@@ -386,4 +386,20 @@ footer {
     max-width: 100%;
     text-align: center;
   }
+  .about-image {
+  position: relative;
+  flex: 1 1 400px;
+  min-height: 280px;
+  background-image: url('slogan.png'); /* <-- aggiunto sfondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  overflow: hidden;
+}
 }
