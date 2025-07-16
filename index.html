@@ -13,9 +13,14 @@
     <div class="header-container">
       <div class="logo">
         <img src="logo.png" alt="Logo SERse" style="height:48px; width:auto; vertical-align: middle;">
-        <div class="logo-text" style="display:inline-block; margin-left: 10px; vertical-align: middle;">SERse</div>
+        <div class="logo-text">SERse</div>
       </div>
-      <nav>
+
+      <!-- Menu hamburger senza JavaScript -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+      <nav id="main-nav">
         <a href="index.html" class="active">Home</a>
         <a href="servizi.html">Servizi</a>
         <a href="notizie.html">Notizie</a>
@@ -64,7 +69,7 @@
   </section>
 
   <!-- Footer -->
-  <footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
+  <footer>
     © 2025 SARse | Tutti i diritti riservati
   </footer>
 </body>
