@@ -161,15 +161,15 @@ nav a:hover, nav a.active {
 .about-image {
   position: relative;
   flex: 1 1 400px;
-  height: 280px;
-  background: url('slogan.png') center center/cover no-repeat;
+  height: 400px; /* altezza aumentata */
+  background: url('slogan.png') center center/contain no-repeat; /* cover -> contain */
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1rem;
-  overflow: hidden;
+  padding: 0; /* tolto padding */
+  overflow: visible; /* overflow da hidden a visible */
 }
 
 .slogan-text {
