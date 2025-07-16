@@ -22,26 +22,16 @@
     </div>
   </header>
 
-<section class="intro">
-  <div class="intro-text">
-    <h1>Notizie</h1>
-    <p>Rimani aggiornato sulle ultime novità, ricerche e aggiornamenti dal mondo della sicurezza e del social engineering.</p>
-  </div>
-</section>
-
-<section class="services-section box-section" id="notizie">
-  <div class="container">
-    <h2 class="section-subtitle">Ultime notizie</h2>
-    <div class="services-grid" id="news-list">
-      Caricamento notizie...
+  <section class="intro">
+    <div class="intro-text">
+      <h1>Notizie</h1>
+      <p>Rimani aggiornato sulle ultime novità, ricerche e aggiornamenti dal mondo della sicurezza e del social engineering.</p>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <section class="services-section box-section" id="notizie">
     <div class="container">
-      <h2>Ultime notizie</h2>
+      <h2 class="section-subtitle">Ultime notizie</h2>
       <div class="services-grid" id="news-list">
         Caricamento notizie...
       </div>
@@ -55,7 +45,7 @@
   </footer>
 
   <script>
-    fetch('notizie/index.json') // <-- percorso corretto qui
+    fetch('notizie/index.json') // percorso corretto al file JSON delle news
       .then(response => response.json())
       .then(noticelist => {
         const container = document.getElementById('news-list');
@@ -67,7 +57,7 @@
 
           const title = document.createElement('h3');
           const link = document.createElement('a');
-          link.href = news.link;
+          link.href = 'notizie/' + news.link; // link corretto alla news
           link.textContent = news.titolo;
           link.style.textDecoration = 'none';
           link.style.color = 'inherit';
