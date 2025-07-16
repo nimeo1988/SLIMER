@@ -45,7 +45,7 @@
   </footer>
 
   <script>
-    fetch('index.json')
+    fetch('notizie/index.json') // <-- percorso corretto qui
       .then(response => response.json())
       .then(noticelist => {
         const container = document.getElementById('news-list');
@@ -57,7 +57,7 @@
 
           const title = document.createElement('h3');
           const link = document.createElement('a');
-          link.href = news.link; // link già corretto nel json
+          link.href = news.link;
           link.textContent = news.titolo;
           link.style.textDecoration = 'none';
           link.style.color = 'inherit';
