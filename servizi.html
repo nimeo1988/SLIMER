@@ -4,46 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Servizi | SERse - PYNLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="SERse Logo">
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="SERse Logo">
+      </div>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./servizi.html" class="active">Servizi</a>
+        <a href="./notizie.html">Notizie</a>
+        <a href="./contatti.html">Contatti</a>
+      </nav>
     </div>
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./servizi.html">Servizi</a>
-      <a href="./notizie.html">Notizie</a>
-      <a href="./contatti.html">Contatti</a>
-    </nav>
   </header>
 
-  <section class="services-section box-section" id="servizi">
-    <h2>I nostri servizi</h2>
-    <div class="services-container">
-      <div class="service-box">
-        <h3>Social Engineering Risk Rating (SERR)</h3>
-        <p>Indice per valutare il rischio legato agli attacchi di ingegneria sociale nella tua organizzazione.</p>
-      </div>
-      <div class="service-box">
-        <h3>TEI Program</h3>
-        <p>TEST, EVALUATE, IMPROVE. Valutazioni e miglioramenti continui per rafforzare la postura di sicurezza umana.</p>
-      </div>
-      <div class="service-box">
-        <h3>Attacchi simulati</h3>
-        <p>Phishing, USB, QR code, BEC, vishing: test realistici e aggiornati costantemente.</p>
-      </div>
-      <div class="service-box">
-        <h3>Formazione comportamentale</h3>
-        <p>Allenamento specifico per indirizzare le decisioni degli utenti nella direzione corretta in scenari di attacco.</p>
+  <section class="intro">
+    <div class="intro-content">
+      <h1>I nostri servizi</h1>
+      <p>Soluzioni complete per proteggere la tua organizzazione dalle minacce di social engineering attraverso metodologie avanzate e approcci personalizzati.</p>
+    </div>
+  </section>
+
+  <section class="services-section" id="servizi">
+    <div class="container">
+      <div class="services-container">
+        <div class="service-box">
+          <h3>Social Engineering Risk Rating (SERR)</h3>
+          <p>Indice proprietario per valutare il rischio legato agli attacchi di ingegneria sociale nella tua organizzazione. Utilizziamo metriche precise e actionable per identificare vulnerabilità comportamentali e definire strategie di mitigazione mirate.</p>
+        </div>
+        <div class="service-box">
+          <h3>TEI Program</h3>
+          <p>TEST, EVALUATE, IMPROVE. Programma di valutazione continua e miglioramento della postura di sicurezza umana. Attraverso cicli iterativi di assessment e training, costruiamo una resilienza organizzativa duratura nel tempo.</p>
+        </div>
+        <div class="service-box">
+          <h3>Attacchi Simulati</h3>
+          <p>Campagne realistiche di phishing, USB drop, QR code, BEC e vishing, costantemente aggiornate alle ultime tecniche di attacco. Test etici condotti in ambienti controllati per valutare la risposta umana alle minacce reali.</p>
+        </div>
+        <div class="service-box">
+          <h3>Formazione Comportamentale</h3>
+          <p>Training specializzato per indirizzare le decisioni degli utenti verso comportamenti sicuri in scenari di attacco reali. Metodologie basate sulla psicologia comportamentale per un apprendimento efficace e duraturo.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <footer id="contatti">
-    &copy; 2025 PYNLab | info@pynlab.it | Tutti i diritti riservati
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contatti</h3>
+          <p><strong>Email:</strong> <a href="mailto:info@pynlab.it">info@pynlab.it</a></p>
+          <p><strong>Telefono:</strong> <a href="tel:+390112233445">+39 011 2233445</a></p>
+          <p><strong>Indirizzo:</strong><br>Via della Sicurezza, 42<br>10100 Torino (TO)</p>
+        </div>
+        <div class="footer-section">
+          <h3>Servizi</h3>
+          <p>Social Engineering Risk Rating</p>
+          <p>TEI Program</p>
+          <p>Attacchi Simulati</p>
+          <p>Formazione Comportamentale</p>
+        </div>
+        <div class="footer-section">
+          <h3>Azienda</h3>
+          <p>Chi Siamo</p>
+          <p>La nostra Mission</p>
+          <p>Metodologie</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PYNLab | Tutti i diritti riservati</p>
+      </div>
+    </div>
   </footer>
 
 </body>
