@@ -158,7 +158,7 @@ nav a:hover, nav a.active {
 }
 
 .about-image {
-  position: relative; /* aggiunto per posizionamento testo */
+  position: relative; /* per posizionare testo sopra */
   flex: 1 1 400px;
   height: 280px;
   background: url('slogan.png') center center/cover no-repeat;
@@ -171,17 +171,17 @@ nav a:hover, nav a.active {
   text-align: center;
 }
 
-.about-image .overlay-text {
+.slogan-text {
   background-color: rgba(0, 0, 0, 0.6); /* sfondo nero trasparente */
-  color: white;
+  color: #0099ff;
   font-size: 1.5rem;
   font-weight: 700;
-  padding: 0.5em 1em;
+  font-style: italic;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
-  -webkit-text-stroke: 1.2px #0066cc; /* contorno blu */
-  text-stroke: 1.2px #0066cc;
   user-select: none;
   max-width: 90%;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 /* --- Services --- */
