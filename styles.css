@@ -379,4 +379,37 @@ footer {
   nav {
     gap: 1rem;
   }
+  /* --- Notizie page intro e titoli --- */
+.intro-text {
+  max-width: 700px;
+  margin: 2rem auto 3rem auto; /* spazio sopra e sotto */
+  text-align: center;
+  color: #b8b8b8;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.section-subtitle {
+  color: #0099ff;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Se vuoi un container più ordinato per le news */
+#news-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 }
