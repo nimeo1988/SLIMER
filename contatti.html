@@ -1,3 +1,4 @@
+<!-- contatti.html -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -20,27 +21,24 @@
     </nav>
   </header>
 
-  <section class="intro">
-    <div class="logo-bg"></div>
-    <div class="intro-text">
-      <h1>Contatti</h1>
-      <p>Hai bisogno di maggiori informazioni sui nostri servizi, vuoi una demo o una consulenza gratuita? Contattaci.</p>
-    </div>
-  </section>
+  <main class="contact-main">
+    <section class="contact-hero">
+      <h1>Contattaci</h1>
+      <p>Per richieste, demo, consulenze o collaborazioni, scrivici o chiamaci. Il team di SERse è a tua disposizione.</p>
+    </section>
 
-  <section class="services-section box-section" id="contatti">
-    <h2 class="section-title">Contatta il team SERse</h2>
-    <div class="services-container contact-flex">
-
-      <div class="service-box contact-info">
-        <h3>Informazioni</h3>
-        <p><strong>Email:</strong> <a href="mailto:info@pynlab.it">info@pynlab.it</a></p>
-        <p><strong>Telefono:</strong> <a href="tel:+390112233445">+39 011 2233445</a></p>
-        <p><strong>Indirizzo:</strong><br>Via della Sicurezza, 42<br>10100 Torino (TO)</p>
+    <section class="contact-grid">
+      <div class="contact-details">
+        <h2>Dati di contatto</h2>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:info@pynlab.it">info@pynlab.it</a></li>
+          <li><strong>Telefono:</strong> <a href="tel:+390112233445">+39 011 2233445</a></li>
+          <li><strong>Indirizzo:</strong> Via della Sicurezza, 42<br>10100 Torino (TO)</li>
+        </ul>
       </div>
 
-      <div class="service-box contact-form">
-        <h3>Scrivici</h3>
+      <div class="contact-form">
+        <h2>Scrivici un messaggio</h2>
         <form action="mailto:info@pynlab.it" method="POST" enctype="text/plain">
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" required>
@@ -49,18 +47,16 @@
           <input type="email" id="email" name="email" required>
 
           <label for="messaggio">Messaggio</label>
-          <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+          <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
 
-          <button type="submit" class="btn">Invia messaggio</button>
+          <button type="submit" class="btn">Invia</button>
         </form>
       </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 PYNLab | info@pynlab.it | Tutti i diritti riservati
   </footer>
-
 </body>
 </html>
