@@ -93,6 +93,8 @@ nav a:hover, nav a.active {
   background: linear-gradient(135deg, #fff, #0066cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text; /* aggiunto per compatibilità */
+  color: transparent;    /* aggiunto per compatibilità */
 }
 
 .hero-content p {
@@ -413,25 +415,6 @@ footer {
   }
   
   .about-image {
-    height: auto;
-    min-height: 200px;
-    background-position: top center;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-image {
-    height: 180px; /* altezza minore per smartphone */
-    background-size: contain; /* evita taglio immagine */
-  }
-
-  .slogan-text {
-    font-size: 1.1rem; /* testo un po’ più piccolo */
-    max-width: 90%;
-    padding: 0 0.5rem;
-  }
-  @media (max-width: 768px) {
-  .about-image {
     flex: 1 1 100%;
     height: auto; /* lascia che l’altezza si adatti */
     min-height: 200px; /* per non sparire */
@@ -447,4 +430,16 @@ footer {
   }
 }
 
+@media (max-width: 480px) {
+  .about-image {
+    height: 180px; /* altezza minore per smartphone */
+    background-size: contain; /* evita taglio immagine */
+    background-position: center center;
+  }
+
+  .slogan-text {
+    font-size: 1.1rem; /* testo un po’ più piccolo */
+    max-width: 90%;
+    padding: 0 0.5rem;
+  }
 }
