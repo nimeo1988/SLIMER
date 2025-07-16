@@ -158,18 +158,19 @@ nav a:hover, nav a.active {
   margin-bottom: 1rem;
 }
 
+/* MODIFICA: rimossa immagine e inserito colore di sfondo */
 .about-image {
   position: relative;
   flex: 1 1 400px;
-  height: 400px; /* altezza aumentata */
-  background: url('slogan.png') center center/contain no-repeat; /* cover -> contain */
+  height: 280px;
+  background-color: #2a2a2a;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0; /* tolto padding */
-  overflow: visible; /* overflow da hidden a visible */
+  padding: 1rem;
+  overflow: hidden;
 }
 
 .slogan-text {
