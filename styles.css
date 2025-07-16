@@ -417,4 +417,18 @@ footer {
     min-height: 200px;
     background-position: top center;
   }
+  /* --- Responsive per smartphone (max-width 480px) --- */
+@media (max-width: 480px) {
+  .about-image {
+    height: 180px; /* altezza minore per smartphone */
+    background-size: contain; /* evita taglio immagine */
+  }
+
+  .slogan-text {
+    font-size: 1.1rem; /* testo un po’ più piccolo */
+    max-width: 90%;
+    padding: 0 0.5rem;
+  }
+}
+
 }
