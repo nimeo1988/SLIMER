@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Notizie - SERse</title>
+  <title>Notizie | SERse - PYNLab</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="logo.png" alt="Logo SERse" width="48" height="48">
+        <div class="logo-placeholder">S</div>
         <div class="logo-text">SERse</div>
       </div>
       <nav>
@@ -23,17 +22,58 @@
     </div>
   </header>
 
-  <section class="news" id="news">
-    <h2>Ultime notizie</h2>
-    <ul class="news-list">
-      <li class="news-item">01/07/2025 - Nuova ondata di attacchi smishing in Italia</li>
-      <li class="news-item">15/06/2025 - Pubblicato il report 2025 sulla sicurezza aziendale</li>
-      <li class="news-item">30/05/2025 - Intervista al nostro CEO sulla cyber awareness</li>
-    </ul>
+  <section class="intro">
+    <div class="intro-text">
+      <h1>Notizie</h1>
+      <p>Rimani aggiornato sulle ultime novità, ricerche e aggiornamenti dal mondo della sicurezza e del social engineering.</p>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 SERse. Tutti i diritti riservati.</p>
+  <section class="services-section box-section" id="notizie">
+    <div class="container">
+      <h2>Ultime notizie</h2>
+      <div class="services-container" id="news-list">
+        Caricamento notizie...
+      </div>
+    </div>
+  </section>
+
+  <footer id="contatti">
+    <div class="container footer-bottom">
+      &copy; 2025 PYNLab | info@pynlab.it | Tutti i diritti riservati
+    </div>
   </footer>
+
+  <script>
+    fetch('notizie/index.json')
+      .then(response => response.json())
+      .then(noticelist => {
+        const container = document.getElementById('news-list');
+        container.innerHTML = '';
+
+        noticelist.forEach(news => {
+          const box = document.createElement('div');
+          box.classList.add('service-box');
+
+          const title = document.createElement('h3');
+          const link = document.createElement('a');
+          link.href = 'notizie/' + news.link;
+          link.textContent = news.titolo;
+          link.style.textDecoration = 'none';
+          link.style.color = 'inherit';
+          title.appendChild(link);
+
+          const paragraph = document.createElement('p');
+          paragraph.textContent = news.abstract;
+
+          box.appendChild(title);
+          box.appendChild(paragraph);
+          container.appendChild(box);
+        });
+      })
+      .catch(() => {
+        document.getElementById('news-list').textContent = 'Errore nel caricamento delle notizie.';
+      });
+  </script>
 </body>
 </html>
