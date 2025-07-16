@@ -43,7 +43,7 @@
   <div id="notizie-container"></div>
 
   <script>
-    fetch('index.json')
+    fetch('notizie/index.json')  // ← percorso aggiornato
       .then(response => response.json())
       .then(data => {
         const container = document.getElementById('notizie-container');
@@ -53,7 +53,7 @@
           div.innerHTML = `
             <h3>${n.titolo}</h3>
             <p>${n.abstract}</p>
-            <a href="${n.link}">Leggi di più</a>
+            <a href="notizie/${n.link}">Leggi di più</a>  <!-- ← anche il link alla pagina -->
           `;
           container.appendChild(div);
         });
