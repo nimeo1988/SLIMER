@@ -367,6 +367,7 @@ footer {
 }
 
 /* --- Responsive --- */
+/*
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
@@ -380,10 +381,10 @@ footer {
     gap: 1rem;
   }
 
-  /* --- Notizie page intro e titoli --- */
+  --- Notizie page intro e titoli ---
   .intro-text {
     max-width: 700px;
-    margin: 2rem auto 3rem auto; /* spazio sopra e sotto */
+    margin: 2rem auto 3rem auto; --- spazio sopra e sotto ---
     text-align: center;
     color: #b8b8b8;
   }
@@ -407,15 +408,16 @@ footer {
     text-align: center;
   }
 
-  /* Se vuoi un container più ordinato per le news */
+  --- Se vuoi un container più ordinato per le news ---
   #news-list {
     max-width: 900px;
     margin: 0 auto;
   }
 
   .about-image {
-    height: auto; /* Lascia che l'altezza si adatti */
-    min-height: 200px; /* un minimo per mantenere buona visibilità */
-    background-position: top center; /* sposta il focus in alto */
+    height: auto; --- Lascia che l'altezza si adatti ---
+    min-height: 200px; --- un minimo per mantenere buona visibilità ---
+    background-position: top center; --- sposta il focus in alto ---
   }
 }
+*/
