@@ -1,0 +1,12 @@
+[
+  {
+    "titolo": "Report 1",
+    "abstract": "Come prevenire le minacce agendo sulla consapevolezza e sul comportamento degli utenti.",
+    "link": "notizia2.html"
+  },
+  {
+    "titolo": "Come vengono generati i grafici",
+    "abstract": "Spiegazione metologia per il calcolo dei grafici.",
+    "link": "metodologia.html"
+  }
+]

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notizie | SERse - PYNLab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+  
+        <div class="logo-text" style="display:inline-block; margin-left: 10px; vertical-align: middle;">SERse</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="notizie.html" class="active">Notizie</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="services-section box-section" id="notizie">
+    <div class="container">
+      <div class="section-header" style="text-align:center; margin-bottom: 40px;">
+        <h2>Notizie</h2>
+        <p>Rimani aggiornato sulle ultime novità, ricerche e aggiornamenti dal mondo della sicurezza e del social engineering.</p>
+      </div>
+
+    
+
+      <div class="services-grid" id="news-list">
+        Caricamento notizie...
+      </div>
+    </div>
+  </section>
+
+ <section class="services-section box-section" id="report">
+    <div class="container">
+      <div class="section-header" style="text-align:center; margin-bottom: 40px;">
+        <h2>Report</h2>
+        <p>I nostri report sul phishing verso l'Italia.</p>
+      </div>
+
+      
+      <div class="services-grid" id="report-list">
+        Caricamento report...
+      </div>
+    </div>
+  </section>
+
+
+     <footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
+    © 2025 SERse | Tutti i diritti riservati
+  </footer>
+
+  <script>
+    fetch('notizie/index.json')
+      .then(response => response.json())
+      .then(noticelist => {
+        const container = document.getElementById('news-list');
+        container.innerHTML = '';
+
+        noticelist.forEach(news => {
+          const box = document.createElement('div');
+          box.classList.add('service-box');
+
+          const title = document.createElement('h3');
+          const link = document.createElement('a');
+          link.href = 'notizie/' + news.link;
+          link.textContent = news.titolo;
+          link.style.textDecoration = 'none';
+          link.style.color = 'inherit';
+          title.appendChild(link);
+
+          const paragraph = document.createElement('p');
+          paragraph.textContent = news.abstract;
+
+          box.appendChild(title);
+          box.appendChild(paragraph);
+          container.appendChild(box);
+        });
+      })
+      .catch(() => {
+        document.getElementById('news-list').textContent = 'Errore nel caricamento delle notizie.';
+      });
+  </script>
+
+<script>
+    fetch('report/index.json')
+      .then(response => response.json())
+      .then(reportlist => {
+        const container = document.getElementById('report-list');
+        container.innerHTML = '';
+
+        reportlist.forEach(reports => {
+          const box = document.createElement('div');
+          box.classList.add('service-box');
+
+          const title = document.createElement('h3');
+          const link = document.createElement('a');
+          link.href = 'report/' + reports.link;
+          link.textContent = reports.titolo;
+          link.style.textDecoration = 'none';
+          link.style.color = 'inherit';
+          title.appendChild(link);
+
+          const paragraph = document.createElement('p');
+          paragraph.textContent = reports.abstract;
+
+          box.appendChild(title);
+          box.appendChild(paragraph);
+          container.appendChild(box);
+        });
+      })
+      .catch(() => {
+        document.getElementById('reports-list').textContent = 'Errore nel caricamento dei report.';
+      });
+  </script>
+
+</body>
+</html>
+</body>
+</html>
