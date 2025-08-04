@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Metodologia per la generazione dei grafici | SERse</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .report-header {
+      background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    
+    .report-title {
+      color: #0066cc;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .report-subtitle {
+      color: #b8b8b8;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .report-metadata {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    
+    .metadata-item {
+      background-color: #0a0a0a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      color: #b8b8b8;
+    }
+    
+    .metadata-label {
+      color: #0066cc;
+      font-weight: 600;
+      display: block;
+      font-size: 0.9rem;
+    }
+    
+    .report-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    
+    .report-section {
+      background-color: #0a0a0a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 102, 204, 0.1);
+    }
+    
+    .report-section h2 {
+      color: #0066cc;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      padding-bottom: 0.5rem;
+    }
+    
+    .report-section h3 {
+      color: #0066cc;
+      font-size: 1.4rem;
+      margin: 1.5rem 0 1rem 0;
+    }
+    
+    .report-section p {
+      color: #b8b8b8;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 102, 204, 0.05));
+      border-left: 4px solid #0066cc;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .stat-card {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .stat-number {
+      color: #0066cc;
+      font-size: 2.5rem;
+      font-weight: 700;
+      display: block;
+    }
+    
+    .stat-label {
+      color: #b8b8b8;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    
+    .threat-level {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .threat-high {
+      background-color: rgba(220, 38, 127, 0.2);
+      color: #dc267f;
+      border: 1px solid #dc267f;
+    }
+    
+    .threat-medium {
+      background-color: rgba(255, 165, 0, 0.2);
+      color: #ffa500;
+      border: 1px solid #ffa500;
+    }
+    
+    .threat-low {
+      background-color: rgba(0, 255, 0, 0.2);
+      color: #00ff00;
+      border: 1px solid #00ff00;
+    }
+    
+    .code-block {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: 'Courier New', monospace;
+      color: #b8b8b8;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    
+    .back-button {
+      background: linear-gradient(135deg, #333, #222);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      margin-bottom: 2rem;
+    }
+    
+    .back-button:hover {
+      background: linear-gradient(135deg, #444, #333);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .report-metadata {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .report-title {
+        font-size: 2rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-text" style="display:inline-block; margin-left: 10px; vertical-align: middle;">SERse</div>
+      </div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../servizi.html">Servizi</a>
+        <a href="../notizie.html" class="active">Notizie</a>
+        <a href="../contatti.html">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="report-header">
+    <h1 class="report-title">Metodologia utilizzata per l'analisi dei siti di phishing</h1>
+    <p class="report-subtitle">Spiegazione della metodologia per l'analisi dei siti di phishing e la generazione dei grafici presenti nei report</p>
+    
+    <div class="report-metadata">
+      <div class="metadata-item">
+        <span class="metadata-label">Data Pubblicazione</span>
+        31 Luglio 2025
+      </div>
+      <div class="metadata-item">
+        <span class="metadata-label">Categoria</span>
+        Report
+      </div>
+    </div>
+  </div>
+
+  <div class="report-content">
+    <a href="../notizie.html" class="back-button">
+      ← Torna alle Notizie
+    </a>
+
+    <div class="report-section">
+      <h2>Raccolta dati</h2>
+      <p>
+        Uno script recupera regolarmente gli URL dei siti di phishing dai seguenti feed pubblici:<br>
+         • OpenPhish: feed gratuito aggiornato ogni 12 ore<br>
+         • Phishing.Database: feed gratuito disponibile su GitHub e aggiornato giornalmente, creato da Mitchell Krog (@mitchellkrogza) e Nissar Chababy (@funilrys)<br>
+         • PhishTank: lista di URL del Cisco Talos Intelligence Group<br>
+         • Phishunt.io: feed in continuo aggiornamento creato dal Cyber Threat Researcher Daniel López.<br> 
+        <br>
+        Prima di inserire gli URL in una lista per le analisi successive vengono effettuati controlli atti a rimuovere i duplicati e segnalare i siti non più raggiungibili.<br>
+        Per ogni URL viene conservata la data di inserzione all'interno della lista.
+      </p>  
+    </div>
+
+    <div class="report-section">
+      <h2>Analisi</h2>
+      <p>
+        Partendo dalla lista così costruita viene operato un primo filtraggio verificando quali tra i siti presenti hanno una versione in lingua italiana o imitano aziende italiane.<br>
+        A ciascun sito filtrato viene assegnata una categoria in base al settore bersaglio dell'attacco ed una in base allo scopo:<br>
+        • Furto di dati personali<br>
+        • Furto dell'account<br>
+        • Furto dati carta di credito/Truffa finanziaria<br>
+        • Furto criptovalute/NFT<br>
+        • Distribuzione malware<br>
+        <br>
+        Dai dati così etichettati si procede alla realizzazione di grafici basati sulle percentuali di presenza di ciascuna etichetta sul totale dei siti filtrati. Quando numericamente opportuno si analizzano anche i trend di attacco di specifici settori.
+      </p>
+
+    </div>
+
+    
+
+  </div>
+
+  <footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666; background-color: #121212; margin-top: 3rem;">
+    © 2025 SERse | Tutti i diritti riservati
+  </footer>
+</body>
+</html>

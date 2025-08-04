@@ -1,0 +1,12 @@
+[
+  {
+    "titolo": "Report: Analisi Campagna Phishing Q1 2025",
+    "abstract": "Report dettagliato sulle campagne di phishing rivolte al territorio italiano nel primo trimestre 2025",
+    "link": "reportq12025.html"
+  },
+  {
+    "titolo": "Metodologia utilizzata per l'analisi dei siti di phishing",
+    "abstract": "Spiegazione della metodologia per l'analisi dei siti di phishing e la generazione dei grafici presenti nei report",
+    "link": "metodologia.html"
+  }
+]

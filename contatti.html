@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contatti | SERse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      
+      <div class="logo-text" style="display:inline-block; margin-left: 10px; vertical-align: middle;">SERse</div>
+    </div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./servizi.html">Servizi</a>
+      <a href="./notizie.html">Notizie</a>
+      <a href="./contatti.html" class="active">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contattaci</h2>
+      <form action="mailto:info@serse.eu" method="post" enctype="text/plain" class="contact-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Messaggio:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Invia</button>
+      </form>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:info@serse.eu">info@serse.eu</a></p>
+        <p><strong>Telefono:</strong> <a href="tel:+390112233445">+39 011 2233445</a></p>
+        <p><strong>Indirizzo:</strong> Via della Sicurezza, 42, 10100 Torino (TO)</p>
+      </div>
+    </div>
+  </section>
+
+   <footer style="text-align: center; padding: 20px 0; font-size: 14px; color: #666;">
+    © 2025 SERse | Tutti i diritti riservati
+  </footer>
+</body>
+</html>
+</body>
+</html>
